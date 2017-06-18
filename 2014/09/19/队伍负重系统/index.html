@@ -1,0 +1,570 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>队伍负重系统 | 命运停驻之地</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="VIPArcher">
+    
+
+    
+    <meta name="description" content="在新窗口中打开脚本页">
+<meta property="og:type" content="article">
+<meta property="og:title" content="队伍负重系统">
+<meta property="og:url" content="http://VIPArcher.github.io/2014/09/19/队伍负重系统/index.html">
+<meta property="og:site_name" content="命运停驻之地">
+<meta property="og:description" content="在新窗口中打开脚本页">
+<meta property="og:updated_time" content="2016-12-24T08:25:47.592Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="队伍负重系统">
+<meta name="twitter:description" content="在新窗口中打开脚本页">
+
+    
+    <link rel="alternative" href="/Hexo/atom.xml" title="命运停驻之地" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/Hexo/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/Hexo/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/Hexo/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/Hexo/css/style.css">
+</head>
+
+  <body>
+    <div id="content" class="viewport">
+      <header class="card">
+        
+<div>
+	
+		<div id="textlogo">
+			<h1 class="site-name"><a href="/Hexo/" title="命运停驻之地">命运停驻之地</a></h1>
+			<h2 class="blog-motto">VIPArcher的个人博客，基本上存放的都是 RPG Maker 的插件脚本。偶尔日常水~</h2>
+		</div>
+		<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+		</a></div>
+		<nav class="animated">
+			<ul>
+				<ul>
+				 
+					<li><a href="/Hexo/">首页</a></li>
+				
+					<li><a href="/Hexo/archives">归档</a></li>
+				
+					<li><a href="/Hexo/rules">注意及规约</a></li>
+				
+					<li><a href="/Hexo/about">关于我</a></li>
+				
+					<li><a href="http://rm.66rpg.com/home.php?mod=space&uid=336539">6R空间</a></li>
+				
+			</ul>
+		</nav>
+</div>
+      </header>
+      <div id="container">
+        <div id="main" class="card post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/Hexo/2014/09/19/队伍负重系统/" title="队伍负重系统" itemprop="url">队伍负重系统</a>
+    
+  </h1>
+  
+    <p class="article-author">By
+      
+  		  <a href="/Hexo/about" title="VIPArcher" target="_blank" itemprop="author">VIPArcher</a>
+  		
+    </p>
+    <p class="article-time">
+      <time datetime="2014-09-18T16:00:00.000Z" itemprop="datePublished"> 发表于 2014-09-19</time>
+    </p>
+  
+</header>
+	<div class="article-content">
+		
+		<p><a href="https://raw.githubusercontent.com/VIPArcher/RGSS3/master/scripts/队伍负重系统.rb" target="_blank" rel="external">在新窗口中打开脚本页</a><br><a id="more"></a><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div><div class="line">348</div><div class="line">349</div><div class="line">350</div><div class="line">351</div><div class="line">352</div><div class="line">353</div><div class="line">354</div><div class="line">355</div><div class="line">356</div><div class="line">357</div><div class="line">358</div><div class="line">359</div><div class="line">360</div><div class="line">361</div><div class="line">362</div><div class="line">363</div><div class="line">364</div><div class="line">365</div><div class="line">366</div><div class="line">367</div><div class="line">368</div><div class="line">369</div><div class="line">370</div><div class="line">371</div><div class="line">372</div><div class="line">373</div><div class="line">374</div><div class="line">375</div><div class="line">376</div><div class="line">377</div><div class="line">378</div><div class="line">379</div><div class="line">380</div><div class="line">381</div><div class="line">382</div><div class="line">383</div><div class="line">384</div><div class="line">385</div><div class="line">386</div><div class="line">387</div><div class="line">388</div><div class="line">389</div><div class="line">390</div><div class="line">391</div><div class="line">392</div><div class="line">393</div><div class="line">394</div><div class="line">395</div><div class="line">396</div><div class="line">397</div><div class="line">398</div><div class="line">399</div><div class="line">400</div><div class="line">401</div></pre></td><td class="code"><pre><div class="line">﻿<span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># +++ VX移植 - VA负重系统改进版 +++</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># VX版 原作者 By 雪流星</span></div><div class="line"><span class="comment"># 蓝本 杂兵天下的VA移植版</span></div><div class="line"><span class="comment"># 改进 By：VIPArcher [email: VIPArcher<span class="doctag">@sina</span>.com]</span></div><div class="line"><span class="comment">#  -- 本脚本来自 http://rm.66rpg.com 使用或转载请保留以上信息。</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># 物品备注&lt;load N&gt; 则该物品占用 N 点负重</span></div><div class="line"><span class="comment"># load也可以写成「负重」或「負重」#注：没有“「」”</span></div><div class="line"><span class="comment"># 不写的话默认为 Default_Load</span></div><div class="line"><span class="comment"># 更改当前负重可以对 $game_party.current_load 进行加，减，赋值</span></div><div class="line"><span class="comment"># 例如：$game_party.current_load += 1 #当前物品总重量加 1</span></div><div class="line"><span class="comment"># 默认给物品增加一行说明.说明内容是物品的重量. 但默认帮助窗口一共只能显示2行内容.</span></div><div class="line"><span class="comment"># 因此你在设置帮助说明的时候. 如果设置了2行内容. 那么这新增加的第3行将无法显示出来.</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line">$VIPArcherScript <span class="params">||</span>= &#123;&#125;;$VIPArcherScript[<span class="symbol">:load</span>] = __FILE_<span class="number">_</span> <span class="comment">#20140919</span></div><div class="line"><span class="comment">#-------------------------------------------------------------------------------</span></div><div class="line"><span class="class"><span class="keyword">module</span>  <span class="title">VIPArcher</span> <span class="title">end</span></span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ★ 设定部分 ★</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">module</span>  <span class="title">VIPArcher::Load</span></span></div><div class="line">  Default_Load = <span class="number">1</span>    <span class="comment"># 物品的默认负重</span></div><div class="line">  Width = <span class="number">150</span>         <span class="comment"># 负重信息窗口宽度</span></div><div class="line">  Load_Name = <span class="string">"负重:"</span> <span class="comment"># 负重前显示的文字</span></div><div class="line">  Load_Var = <span class="number">0</span>        <span class="comment"># 作为队伍负重上限的变量ID，为0禁用变量作为负重上限，</span></div><div class="line">                      <span class="comment"># 计算方式变成累计每个角色的负重能力来计算负重上限。</span></div><div class="line">  Load_Eval = <span class="string">"((mhp + mmp) / agi) * [hp_rate,0.5].max"</span></div><div class="line">  <span class="comment"># 每个角色的负重计算公式（eval）</span></div><div class="line">  </div><div class="line">  Stop_SW = <span class="literal">false</span>       <span class="comment"># true 使用 / false 不使用</span></div><div class="line">  <span class="comment"># 事件中调用增减道具/武器/防具时，如果会导致超过负重上限，是否执行中断事件处理</span></div><div class="line">  <span class="comment"># 推荐不使用，因为新加的功能就有一个是当超过负重时限制角色移动，开启这个</span></div><div class="line">  <span class="comment"># 的话这个限制移动就无效了的说·3·</span></div><div class="line"></div><div class="line">  Movable =  <span class="literal">true</span>       <span class="comment"># true 使用 / false 不使用</span></div><div class="line">  <span class="comment"># 满负重时降低移动速度（不使用时禁止移动连事件都无法启动，只能丢弃/使用物品）</span></div><div class="line"></div><div class="line">  Move_Speed = <span class="number">2</span> <span class="comment"># 满负重时的移动速度降低量</span></div><div class="line"></div><div class="line">  <span class="comment"># 负重超过上限时的提示内容</span></div><div class="line">  Message = <span class="string">"负重超过承受范围，移动将变得\ec[10]【十分艰难！】\\c[0]"</span> +</div><div class="line">            <span class="string">"\n\ei[4]丢弃些没用的东西吧。"</span></div><div class="line"></div><div class="line">  Lose_SW = <span class="literal">true</span>       <span class="comment"># true 使用 / false 不使用</span></div><div class="line">                       <span class="comment"># 按X键（A键）是否可以丢弃道具</span></div><div class="line">                       <span class="comment"># 如果你另外使用了丢弃道具的脚本请关闭</span></div><div class="line"></div><div class="line">  Help_SW = <span class="literal">true</span>       <span class="comment">#true 使用 / false 不使用</span></div><div class="line">  <span class="comment"># 是否在帮助窗口内自动添加负重信息</span></div><div class="line"></div><div class="line">  Equip_SW = <span class="literal">true</span>      <span class="comment">#true 计算 / false 不计算</span></div><div class="line">  <span class="comment"># 装备在身上的装备是否算入负重</span></div><div class="line">  <span class="comment">#        "★★★★★★ 注意 ★★★★★★"</span></div><div class="line">  <span class="comment"># 如果你的角色初始装备有占负重并且开启上面的功能，那么你必须</span></div><div class="line">  <span class="comment"># 在游戏一开始时为当前负重赋值（自己算到底有多少负重·3·）</span></div><div class="line">  <span class="comment"># 当有新队员加入队伍并且也带有负重的装备那么你也需要为当前负重加上对应的重量，</span></div><div class="line">  <span class="comment"># 例如：$game_party.current_load += 10 就是加上10的当前负重</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ☆ 设定结束 ☆</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">RPG::BaseItem</span></span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取道具的重量</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">load</span></span></div><div class="line">    <span class="keyword">return</span> unless <span class="keyword">self</span>.is_a?(RPG::Item) <span class="params">||</span> <span class="keyword">self</span>.is_a?(RPG::EquipItem)</div><div class="line">    <span class="keyword">return</span> $1.to_i <span class="keyword">if</span> @note =~ <span class="regexp">/&lt;(?:load|负重|負重)\s*(\d+)&gt;/i</span></div><div class="line">    Default_Load</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 新增负重帮助内容</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">description</span></span></div><div class="line">    <span class="keyword">if</span> Help_SW &amp;&amp; load &amp;&amp; load != <span class="number">0</span></div><div class="line">      @description + <span class="string">"\n\e&#125;重量:<span class="subst">#&#123;load&#125;</span>\e&#123;"</span></div><div class="line">    <span class="keyword">else</span></div><div class="line">      @description</div><div class="line">    <span class="keyword">end</span></div><div class="line">  <span class="keyword">end</span> unless $VIPArcherScript[<span class="symbol">:help_ex</span>]</div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># 　显示当前负重信息的窗口</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Window_Load</span> &lt; Window_Base</span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 初始化对象</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(viewport)</span></span></div><div class="line">    <span class="keyword">super</span>(Graphics.width - window_width, <span class="number">72</span>, window_width, fitting_height(<span class="number">1</span>))</div><div class="line">    <span class="keyword">self</span>.viewport = @viewport</div><div class="line">    refresh</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取窗口的宽度</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">window_width</span></span></div><div class="line">    Width</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 刷新</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">refresh</span></span></div><div class="line">    contents.clear</div><div class="line">    contents.font.size - <span class="number">4</span></div><div class="line">    change_color(system_color)</div><div class="line">    draw_text(<span class="number">0</span>, <span class="number">0</span>, window_width - <span class="number">64</span>, <span class="number">24</span>,Load_Name,<span class="number">0</span>)</div><div class="line">    change_color($game_party.load_max? ? power_down_color : normal_color)</div><div class="line">    weight = <span class="string">"<span class="subst">#&#123;$game_party.current_load&#125;</span>/<span class="subst">#&#123;$game_party.total_load&#125;</span>"</span></div><div class="line">    draw_text(<span class="number">0</span>, <span class="number">0</span>, window_width - <span class="number">24</span>, <span class="number">24</span>, weight,<span class="number">2</span>)</div><div class="line">    @temp_load = $game_party.current_load</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 更新画面</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">update</span></span></div><div class="line">    <span class="keyword">super</span></div><div class="line">    refresh <span class="keyword">if</span> @temp_load != $game_party.current_load</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#-------------------------------------------------------------------------------</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Window_ItemCategory</span> &lt; Window_HorzCommand</span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取窗口的宽度</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">window_width</span></span></div><div class="line">    scene_item_is? ? Graphics.width - Width : Graphics.width</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取列数</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">col_max</span></span></div><div class="line">    <span class="keyword">return</span> scene_item_is? ? <span class="number">3</span> : <span class="number">4</span></div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 判断是否为物品栏场景</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">scene_item_is?</span></span></div><div class="line">    <span class="keyword">return</span> SceneManager.scene_is?(Scene_Item)</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ■ 物品界面显示负重栏</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Scene_Item</span> &lt; Scene_ItemBase</span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 开始处理</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_start start</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">start</span></span></div><div class="line">    load_start</div><div class="line">    @load_window = Window_Load.new(@viewport)</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 更新画面</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_update update</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">update</span></span></div><div class="line">    <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">    <span class="comment"># ★ 按X键（A键）丢弃道具 - 贵重物品无法丢弃 ★修改：VIPArcher</span></div><div class="line">    <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">    <span class="keyword">if</span> Input.trigger?(Input::X) &amp;&amp; Lose_SW</div><div class="line">      item = @item_window.item</div><div class="line">      <span class="keyword">if</span> item.is_a?(RPG::Item) &amp;&amp; item.key_item? <span class="params">||</span> item.<span class="literal">nil</span>?</div><div class="line">        Sound.play_buzzer</div><div class="line">      <span class="keyword">else</span></div><div class="line">        Sound.play_cancel</div><div class="line">        $game_party.lose_item(item, <span class="number">1</span>)</div><div class="line">        @item_window.refresh</div><div class="line">      <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    load_update</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#-------------------------------------------------------------------------------</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Window_ShopNumber</span> &lt; Window_Selectable</span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:buy_or_sell</span>                    <span class="comment">#买入的标志</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 刷新</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> vip_shopnumber_refresh refresh</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">refresh</span></span></div><div class="line">    vip_shopnumber_refresh</div><div class="line">    draw_current_weight(@item)</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ○ 买卖时重量变化的描绘</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">draw_current_weight</span><span class="params">(item)</span></span></div><div class="line">    current = $game_party.current_load</div><div class="line">    weight = current + item.load * @number * (@buy_or_sell ? <span class="number">1</span> : -<span class="number">1</span>)</div><div class="line">    width = contents_width - <span class="number">8</span></div><div class="line">    cx = text_size(@currency_unit).width</div><div class="line">    change_color(system_color)</div><div class="line">    draw_text(<span class="number">4</span>, y + <span class="number">60</span>, width, line_height, Load_Name)</div><div class="line">    change_color(normal_color)</div><div class="line">    wt = <span class="string">"<span class="subst">#&#123;weight&#125;</span> / <span class="subst">#&#123;$game_party.total_load&#125;</span>"</span></div><div class="line">    change_color(power_down_color) <span class="keyword">if</span> weight &gt; $game_party.total_load</div><div class="line">    draw_text(<span class="number">4</span>, y + <span class="number">60</span>, width, line_height, wt, <span class="number">2</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#-------------------------------------------------------------------------------</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Window_ShopStatus</span> &lt; Window_Base</span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 刷新</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> vip_shopstatus_refresh refresh</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">refresh</span></span></div><div class="line">    vip_shopstatus_refresh</div><div class="line">    draw_weight_occupy(<span class="number">4</span>, <span class="number">24</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 绘制持负重信息</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">draw_weight_occupy</span><span class="params">(x, y)</span></span></div><div class="line">    rect = Rect.new(x, y, contents.width - <span class="number">4</span> - x, line_height)</div><div class="line">    change_color(system_color)</div><div class="line">    draw_text(rect, Load_Name, <span class="number">3</span>)</div><div class="line">    change_color(normal_color)</div><div class="line">    weight = <span class="string">"<span class="subst">#&#123;$game_party.current_load&#125;</span>/<span class="subst">#&#123;$game_party.total_load&#125;</span>"</span></div><div class="line">    change_color(power_down_color) <span class="keyword">if</span> $game_party.load_max?</div><div class="line">    draw_text(rect, weight, <span class="number">2</span>)</div><div class="line">    @temp_load = $game_party.current_load</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ■ 获取队伍最大负重</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game_Party</span> &lt; Game_Unit</span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 定义实例变量</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:current_load</span>, <span class="symbol">:load_trade_item</span>     <span class="comment">#负重</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 初始化对象</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_initialize initialize</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></div><div class="line">    load_initialize</div><div class="line">    total_load</div><div class="line">    @current_load = <span class="number">0</span></div><div class="line">    @total_load = <span class="number">0</span></div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取队伍最大负重</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">total_load</span></span></div><div class="line">    <span class="keyword">return</span> $game_variables[Load_Var] <span class="keyword">if</span> Load_Var &gt; <span class="number">0</span></div><div class="line">    all_members.inject(<span class="number">0</span>) &#123;<span class="params">|total,actor|</span> total + actor.load &#125;</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 判断负重是否已满</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">load_max?</span></span></div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span> <span class="keyword">if</span> @current_load == <span class="number">0</span></div><div class="line">    @current_load &gt;= total_load</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 增加／减少物品时计算负重</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_gain_item gain_item</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">gain_item</span><span class="params">(item, n, include_equip = <span class="literal">false</span>)</span></span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">if</span> item.<span class="literal">nil</span>?</div><div class="line">    load_gain_item(item, n, include_equip)</div><div class="line">    @current_load += item.load * n unless @load_trade_item</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#-------------------------------------------------------------------------------</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game_Actor</span> &lt; Game_Battler</span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 装备时不计算负重的增减 * 方法覆盖</span></div><div class="line">  <span class="comment">#     new_item : 取出的物品</span></div><div class="line">  <span class="comment">#     old_item : 放入的物品</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">trade_item_with_party</span><span class="params">(new_item, old_item)</span></span></div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span> <span class="keyword">if</span> new_item &amp;&amp; !$game_party.has_item?(new_item)</div><div class="line">    $game_party.load_trade_item = <span class="literal">true</span> <span class="keyword">if</span> Equip_SW == <span class="literal">true</span></div><div class="line">    $game_party.gain_item(old_item, <span class="number">1</span>)</div><div class="line">    $game_party.lose_item(new_item, <span class="number">1</span>)</div><div class="line">    $game_party.load_trade_item = <span class="literal">false</span> <span class="keyword">if</span> Equip_SW == <span class="literal">true</span></div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取角色的负重上限</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">load</span></span></div><div class="line">    eval(Load_Eval).to_i <span class="keyword">rescue</span> msgbox <span class="string">"请检查负重能力公式是否正确"</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ■ 增减物品时判断负重</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game_Interpreter</span></span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 增减道具</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_command_126 command_126</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">command_126</span></span></div><div class="line">    n = operate_value(@params[<span class="number">1</span>], @params[<span class="number">2</span>], @params[<span class="number">3</span>])</div><div class="line">    <span class="keyword">return</span> command_115 <span class="keyword">if</span> check_load($data_items[@params[<span class="number">0</span>]], n) &amp;&amp; Stop_SW</div><div class="line">    load_command_126</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 增減武器</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_command_127 command_127</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">command_127</span></span></div><div class="line">    n = operate_value(@params[<span class="number">1</span>], @params[<span class="number">2</span>], @params[<span class="number">3</span>])</div><div class="line">    <span class="keyword">return</span> command_115 <span class="keyword">if</span> check_load($data_weapons[@params[<span class="number">0</span>]], n) &amp;&amp; Stop_SW</div><div class="line">    load_command_127</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 增減防具</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_command_128 command_128</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">command_128</span></span></div><div class="line">    n = operate_value(@params[<span class="number">1</span>], @params[<span class="number">2</span>], @params[<span class="number">3</span>])</div><div class="line">    <span class="keyword">return</span> command_115 <span class="keyword">if</span> check_load($data_armors[@params[<span class="number">0</span>]], n) &amp;&amp; Stop_SW</div><div class="line">    load_command_128</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 增减物品超重时提示</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">check_load</span><span class="params">(item, n)</span></span></div><div class="line">    <span class="keyword">if</span> (((item.load * n) + $game_party.current_load) &gt; $game_party.total_load)</div><div class="line">      $game_message.texts.push(<span class="string">"<span class="subst">#&#123;Message&#125;</span>"</span>) <span class="keyword">if</span> $game_message.visible != <span class="literal">true</span></div><div class="line">      $game_message.visible = <span class="literal">true</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    ((item.load * n) + $game_party.current_load) &gt; $game_party.total_load</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ★ 满负重时限制行动 ★</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game_Player</span> &lt; Game_Character</span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Load</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 判定是否可以移动</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_movable? movable?</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">movable?</span></span></div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span> <span class="keyword">if</span> $game_party.load_max? &amp;&amp; !Movable ; load_movable?</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 满负重时降低移动速度</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">real_move_speed</span></span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span> - Move_Speed <span class="keyword">if</span> $game_party.load_max? &amp;&amp; Movable ; <span class="keyword">super</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ★ 满负重时限制购买 ★</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Window_ShopBuy</span> &lt; Window_Selectable</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 查询商品是否可买</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_enable? enable?</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">enable?</span><span class="params">(item)</span></span></div><div class="line">    load_enable?(item) &amp;&amp; !$game_party.load_max?</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ★ 根据负重设定可购买的物品数量 ★</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Scene_Shop</span> &lt; Scene_MenuBase</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 指令“买入”</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> vip_load_command_buy command_buy</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">command_buy</span></span></div><div class="line">    vip_load_command_buy ; @number_window.buy_or_sell = <span class="literal">true</span></div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 指令“卖出”</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> vip_load_command_sell command_sell</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">command_sell</span></span></div><div class="line">    vip_load_command_sell ; @number_window.buy_or_sell = <span class="literal">false</span></div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取可以买入的最大值</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> load_max_buy max_buy</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">max_buy</span></span></div><div class="line">    vip = @item.load == <span class="number">0</span> ? load_max_buy : ($game_party.total_load - </div><div class="line">    $game_party.current_load) / @item.load</div><div class="line">    [load_max_buy,vip].min</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/Hexo/categories/RGSS3/">RGSS3</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/Hexo/tags/RMVA/">RMVA</a><a href="/Hexo/tags/系统脚本/">系统脚本</a>
+  </div>
+
+</div>
+
+
+
+	
+		<div class="article-share" id="share">
+		
+		  <div data-url="http://VIPArcher.github.io/Hexo/2014/09/19/队伍负重系统/" data-title="队伍负重系统 | 命运停驻之地" data-tsina="2209859500" class="share clearfix">
+		  </div>
+		
+		</div>
+	
+
+
+</footer>
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/Hexo/2014/09/20/椅子/" title="椅子">
+  <strong>上一篇：</strong><br/>
+  <span>
+  椅子</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/Hexo/2014/09/17/镜像/"  title="镜像">
+ <strong>下一篇：</strong><br/> 
+ <span>镜像
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2014/09/19/队伍负重系统/" data-title="队伍负重系统" data-url="http://VIPArcher.github.io/Hexo/2014/09/19/队伍负重系统/"></div>
+</section>
+
+
+</div>
+        <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart" class="card">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="weiboshow">
+  <p class="asidetitle">我的微博</p>
+	<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=&height=&fansRow=1&ptype=0&speed=0&skin=9&isTitle=0&noborder=1&isWeibo=0&isFans=0&uid=2209859500&verifier=a2e3df32&colors=ffffff,ffffff,666666,0082cb,ecfbfd&dpc=1">这里本来应该显示一个微博秀</iframe>
+</div>
+
+  <div class="musicshow">
+  <p class="asidetitle">Music!</p>
+  <embed id="musicEmbed" type="application/x-shockwave-flash" width="190" height="275" wmode="opaque"></embed>
+  <script type="text/javascript">
+  	(function(){
+	  function playMusic(list){
+	    document.getElementById("musicEmbed").src = 'https://www.xiami.com/widget/49935010_' +
+	    list + '_190_300_2CA6CB_F1F1F1_1/multiPlayer.swf'
+	  }
+	  function randPlayList(max){
+	    var list = [1775863928,1769509693,3035981,1769340552,3435904,1769304758,1769462115,1769304758,1771526122,1770554727,1769605529,1770728495,1769701059,1772515105,1770102834,368272].sort(function(){ return 0.5 - Math.random() })
+	      return list.slice(0,max).join(',')
+	  }
+	  playMusic(randPlayList(10))
+	})()
+  </script>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/Hexo/categories/JGSS1/" title="JGSS1">JGSS1<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/Hexo/categories/RGSS3/" title="RGSS3">RGSS3<sup>30</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/Hexo/tags/RMVA/" title="RMVA">RMVA<!--sup>30</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/地图效果/" title="地图效果">地图效果<!--sup>12</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/系统脚本/" title="系统脚本">系统脚本<!--sup>8</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/战斗脚本/" title="战斗脚本">战斗脚本<!--sup>4</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/RMMV/" title="RMMV">RMMV<!--sup>3</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/菜单脚本/" title="菜单脚本">菜单脚本<!--sup>3</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/跳过标题/" title="跳过标题">跳过标题<!--sup>2</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/菜单效果/" title="菜单效果">菜单效果<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/对话框脚本/" title="对话框脚本">对话框脚本<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/便捷脚本/" title="便捷脚本">便捷脚本<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/基础脚本/" title="基础脚本">基础脚本<!--sup>1</sup--></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/Hexo/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">有趣的地方</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://rm.66rpg.com/" target="_blank" title="梦想世界，在你手中">66RPG</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://seiran.mist.so/" target="_blank" title="晴兰的秘密社团">Seiran</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://taroxd.github.io/" target="_blank" title="Taroxd's Blog">Taroxd</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://hyrious.github.io/" target="_blank" title="喵喵喵的沟">喵喵喵的沟</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://miaowm5.coding.me/script-blog/list.html" target="_blank" title="喵呜喵5的原创脚本列表">喵污的脚本列表</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://rmproject.lofter.com/hello" target="_blank" title="授权素材推广计划">授权素材推广计划</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+      </div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Free RPG Maker Scripts <br/>
+			More Things About RPG Maker</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/VIPArcher" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/VIPArcher" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:VIPArcher@sina.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" target="_blank">
+            <img src="/Hexo/img/cc-by-nc-sa.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+	<p class="copyright">Powered by 
+		<a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 
+		2017 
+		
+			<a href="/Hexo/about" target="_blank" title="VIPArcher">VIPArcher</a>
+		
+	</p>
+</div>
+</footer>
+  </body>
+  <script src="/Hexo/js/jquery-2.0.3.min.js"></script>
+<script src="/Hexo/js/jquery.imagesloaded.min.js"></script>
+<script src="/Hexo/js/gallery.js"></script>
+<script src="/Hexo/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"viparcher"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Hexo/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/Hexo/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e7773379953bb5491e404334f9c05797";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/Hexo/img/scrollup.png"/></a>
+	</div>
+	<script src="/Hexo/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<!-- console.log("By VIPArcher") -->
+<script>ﾟωﾟﾉ= /｀ｍ´）ﾉ ~┻━┻   //*´∇｀*/ ['_']; o=(ﾟｰﾟ)  =_=3; c=(ﾟΘﾟ) =(ﾟｰﾟ)-(ﾟｰﾟ); (ﾟДﾟ) =(ﾟΘﾟ)= (o^_^o)/ (o^_^o);(ﾟДﾟ)={ﾟΘﾟ: '_' ,ﾟωﾟﾉ : ((ﾟωﾟﾉ==3) +'_') [ﾟΘﾟ] ,ﾟｰﾟﾉ :(ﾟωﾟﾉ+ '_')[o^_^o -(ﾟΘﾟ)] ,ﾟДﾟﾉ:((ﾟｰﾟ==3) +'_')[ﾟｰﾟ] }; (ﾟДﾟ) [ﾟΘﾟ] =((ﾟωﾟﾉ==3) +'_') [c^_^o];(ﾟДﾟ) ['c'] = ((ﾟДﾟ)+'_') [ (ﾟｰﾟ)+(ﾟｰﾟ)-(ﾟΘﾟ) ];(ﾟДﾟ) ['o'] = ((ﾟДﾟ)+'_') [ﾟΘﾟ];(ﾟoﾟ)=(ﾟДﾟ) ['c']+(ﾟДﾟ) ['o']+(ﾟωﾟﾉ +'_')[ﾟΘﾟ]+ ((ﾟωﾟﾉ==3) +'_') [ﾟｰﾟ] + ((ﾟДﾟ) +'_') [(ﾟｰﾟ)+(ﾟｰﾟ)]+ ((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+((ﾟｰﾟ==3) +'_') [(ﾟｰﾟ) - (ﾟΘﾟ)]+(ﾟДﾟ) ['c']+((ﾟДﾟ)+'_') [(ﾟｰﾟ)+(ﾟｰﾟ)]+ (ﾟДﾟ) ['o']+((ﾟｰﾟ==3) +'_') [ﾟΘﾟ];(ﾟДﾟ) ['_'] =(o^_^o) [ﾟoﾟ] [ﾟoﾟ];(ﾟεﾟ)=((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+ (ﾟДﾟ) .ﾟДﾟﾉ+((ﾟДﾟ)+'_') [(ﾟｰﾟ) + (ﾟｰﾟ)]+((ﾟｰﾟ==3) +'_') [o^_^o -ﾟΘﾟ]+((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+ (ﾟωﾟﾉ +'_') [ﾟΘﾟ]; (ﾟｰﾟ)+=(ﾟΘﾟ); (ﾟДﾟ)[ﾟεﾟ]='\\'; (ﾟДﾟ).ﾟΘﾟﾉ=(ﾟДﾟ+ ﾟｰﾟ)[o^_^o -(ﾟΘﾟ)];(oﾟｰﾟo)=(ﾟωﾟﾉ +'_')[c^_^o];(ﾟДﾟ) [ﾟoﾟ]='\"';(ﾟДﾟ) ['_'] ( (ﾟДﾟ) ['_'] (ﾟεﾟ+(ﾟДﾟ)[ﾟoﾟ]+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟΘﾟ)+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟoﾟ]) (ﾟΘﾟ)) ('_');</script>
+</html>

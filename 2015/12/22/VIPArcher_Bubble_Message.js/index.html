@@ -1,0 +1,570 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>MV气泡吹出对话框 | 命运停驻之地</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="VIPArcher">
+    
+
+    
+    <meta name="description" content="在新窗口中打开脚本页">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MV气泡吹出对话框">
+<meta property="og:url" content="http://VIPArcher.github.io/2015/12/22/VIPArcher_Bubble_Message.js/index.html">
+<meta property="og:site_name" content="命运停驻之地">
+<meta property="og:description" content="在新窗口中打开脚本页">
+<meta property="og:updated_time" content="2017-06-18T16:13:55.889Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MV气泡吹出对话框">
+<meta name="twitter:description" content="在新窗口中打开脚本页">
+
+    
+    <link rel="alternative" href="/Hexo/atom.xml" title="命运停驻之地" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/Hexo/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/Hexo/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/Hexo/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/Hexo/css/style.css">
+</head>
+
+  <body>
+    <div id="content" class="viewport">
+      <header class="card">
+        
+<div>
+	
+		<div id="textlogo">
+			<h1 class="site-name"><a href="/Hexo/" title="命运停驻之地">命运停驻之地</a></h1>
+			<h2 class="blog-motto">VIPArcher的个人博客，基本上存放的都是 RPG Maker 的插件脚本。偶尔日常水~</h2>
+		</div>
+		<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+		</a></div>
+		<nav class="animated">
+			<ul>
+				<ul>
+				 
+					<li><a href="/Hexo/">首页</a></li>
+				
+					<li><a href="/Hexo/archives">归档</a></li>
+				
+					<li><a href="/Hexo/rules">注意及规约</a></li>
+				
+					<li><a href="/Hexo/about">关于我</a></li>
+				
+					<li><a href="http://rm.66rpg.com/home.php?mod=space&uid=336539">6R空间</a></li>
+				
+			</ul>
+		</nav>
+</div>
+      </header>
+      <div id="container">
+        <div id="main" class="card post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/Hexo/2015/12/22/VIPArcher_Bubble_Message.js/" title="MV气泡吹出对话框" itemprop="url">MV气泡吹出对话框</a>
+    
+  </h1>
+  
+    <p class="article-author">By
+      
+  		  <a href="/Hexo/about" title="VIPArcher" target="_blank" itemprop="author">VIPArcher</a>
+  		
+    </p>
+    <p class="article-time">
+      <time datetime="2015-12-21T16:00:00.000Z" itemprop="datePublished"> 发表于 2015-12-22</time>
+    </p>
+  
+</header>
+	<div class="article-content">
+		
+		<p><a href="https://raw.githubusercontent.com/VIPArcher/JGSS/master/plugins/VIPArcher_Bubble_Message.js" target="_blank" rel="external">在新窗口中打开脚本页</a><br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//=============================================================================</span></div><div class="line"><span class="comment">// VIPArcher_Bubble_Message.js</span></div><div class="line"><span class="comment">//=============================================================================</span></div><div class="line"><span class="comment">/*:</span></div><div class="line"> * @plugindesc VIPArcher_Bubble_Message</div><div class="line"> * @author VIPArcher</div><div class="line"> *</div><div class="line"> * @param BubbleTagName</div><div class="line"> * @desc Filename of the tag image used in Bubble Message ( the image file should be put under the catalog "/img/system")</div><div class="line"> * @default BubbleTag</div><div class="line"> *</div><div class="line"> * @param TopMessageReviseY</div><div class="line"> * @desc Offset of Y axis for Bubble Message's window when Bubble Message is shown upon characters or events( negetive values are allowed)</div><div class="line"> * @default 0</div><div class="line"> *</div><div class="line"> * @param TopTagReviseY</div><div class="line"> * @desc Offset of Y axis for Bubble Message's tag image when Bubble Message is shown upon characters or events( negetive values are allowed)</div><div class="line"> * @default 0</div><div class="line"> *</div><div class="line"> * @param BottomMessageReviseY</div><div class="line"> * @desc Offset of Y axis for Bubble Message's window when Bubble Message is shown beyond characters or events( negetive values are allowed)</div><div class="line"> * @default 0</div><div class="line"> *</div><div class="line"> * @param BottomTagReviseY</div><div class="line"> * @desc Offset of Y axis for Bubble Message's tag image when Bubble Message is shown beyond characters or events( negetive values are allowed)</div><div class="line"> * @default 0</div><div class="line"> *</div><div class="line"> * @help Insert \BM[ID] in the message command to convert the current message window into a Bubble Message window for events. (also \bm[ID] is valid)</div><div class="line"> * Replace "ID" with ID of the event which is wanted to be pointed by the Bubble Message Tag.</div><div class="line"> * ( while the number 0 replacing ID means the Bubble Message points to the current event where the message command is)</div><div class="line"> * WARNING: be sure that the ID number won't point to a non-existent event!</div><div class="line"> *</div><div class="line"> * Insert \BMF[ID] in the message command to convert the current message window into a Bubble Message window for the player and the followers. (also \bmf[ID] is valid)</div><div class="line"> * Replace "ID" with 0 if Bubble Message is to show upon the player, or with the team No. of the target follower.</div><div class="line"> * WARNING: be sure that the ID number won't point to a  non-existent follower!</div><div class="line"> *</div><div class="line"> * ver 1.0.0 Last updated on 2015/12/19 : https://github.com/VIPArcher/RMMV-JS</div><div class="line"> */</div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> parameters        = PluginManager.parameters(<span class="string">'VIPArcher_Bubble_Message'</span>);</div><div class="line">    <span class="keyword">var</span> topTagReviseY        = <span class="built_in">String</span>(parameters[<span class="string">'TopTagReviseY'</span>]        || <span class="string">'0'</span>);</div><div class="line">    <span class="keyword">var</span> bottomTagReviseY     = <span class="built_in">String</span>(parameters[<span class="string">'BottomTagReviseY'</span>]     || <span class="string">'0'</span>);</div><div class="line">    <span class="keyword">var</span> topMessageReviseY    = <span class="built_in">String</span>(parameters[<span class="string">'TopMessageReviseY'</span>]    || <span class="string">'0'</span>);</div><div class="line">    <span class="keyword">var</span> bottomMessageReviseY = <span class="built_in">String</span>(parameters[<span class="string">'BottomMessageReviseY'</span>] || <span class="string">'0'</span>);</div><div class="line">    <span class="keyword">var</span> bubbleTagName   =   <span class="built_in">String</span>(parameters[<span class="string">'BubbleTagName'</span>]  ||  <span class="string">'BubbleTag'</span>);</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Window_Message_Face</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.initialize.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">    &#125;;</div><div class="line">    Window_Message_Face.prototype = <span class="built_in">Object</span>.create(Window_Base.prototype);</div><div class="line">    Window_Message_Face.prototype.constructor = Window_Message_Face;</div><div class="line">    Window_Message_Face.prototype.initialize = <span class="function"><span class="keyword">function</span>(<span class="params">messageWindow</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> width = <span class="keyword">this</span>.windowWidth();</div><div class="line">        <span class="keyword">var</span> height = <span class="keyword">this</span>.windowHeight();</div><div class="line">        <span class="keyword">this</span>._messageWindow = messageWindow;</div><div class="line">        Window_Base.prototype.initialize.call(<span class="keyword">this</span>, <span class="number">0</span>, <span class="number">0</span>, width, height);</div><div class="line">        <span class="keyword">this</span>._faceBitmap = <span class="literal">null</span>;</div><div class="line">        <span class="keyword">this</span>.visible = <span class="literal">false</span>;</div><div class="line">        <span class="keyword">this</span>.opacity = <span class="number">0</span>;</div><div class="line">    &#125;;</div><div class="line">    Window_Message_Face.prototype.windowWidth = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">180</span>;</div><div class="line">    &#125;;</div><div class="line">    Window_Message_Face.prototype.windowHeight = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">180</span>;</div><div class="line">    &#125;;</div><div class="line">    Window_Message_Face.prototype.updateLoading = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>._faceBitmap) &#123;</div><div class="line">            <span class="keyword">if</span> (ImageManager.isReady()) &#123;</div><div class="line">                <span class="keyword">this</span>.drawMessageFace();</div><div class="line">                <span class="keyword">this</span>._faceBitmap = <span class="literal">null</span>;</div><div class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="literal">true</span>; &#125;;</div><div class="line">        &#125; <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="literal">false</span>; &#125;;</div><div class="line">    &#125;;</div><div class="line">    Window_Message_Face.prototype.loadMessageFace = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>._faceBitmap = ImageManager.loadFace($gameMessage.faceName());</div><div class="line">    &#125;;</div><div class="line">    Window_Message_Face.prototype.drawMessageFace = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.drawFace($gameMessage.faceName(), $gameMessage.faceIndex(), <span class="number">0</span>, <span class="number">0</span>);</div><div class="line">    &#125;;</div><div class="line">    Window_Message_Face.prototype.update = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        Window_Base.prototype.update.call(<span class="keyword">this</span>);</div><div class="line">        <span class="keyword">this</span>.updateLoading();</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.contentsOpacity &lt; <span class="number">255</span>) &#123;<span class="keyword">this</span>.contentsOpacity += <span class="number">15</span>&#125;;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.move_x &gt;= <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">this</span>.x += <span class="number">4</span>;</div><div class="line">            <span class="keyword">this</span>.move_x -= <span class="number">4</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    Window_Message_Face.prototype.setFace = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.contents.clear();</div><div class="line">        <span class="keyword">if</span> (!!<span class="keyword">this</span>._messageWindow &amp;&amp; $gameMessage.faceName() != <span class="string">''</span>) &#123;</div><div class="line">            <span class="keyword">this</span>.loadMessageFace();</div><div class="line">            <span class="keyword">this</span>.setPosition();</div><div class="line">            <span class="keyword">this</span>.show();</div><div class="line">            <span class="keyword">this</span>.open();</div><div class="line">        &#125; <span class="keyword">else</span> &#123; <span class="keyword">this</span>.hide(); &#125;;</div><div class="line">    &#125;;</div><div class="line">    Window_Message_Face.prototype.setPosition = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.y = <span class="keyword">this</span>._messageWindow.height - <span class="keyword">this</span>.windowHeight();</div><div class="line">        <span class="keyword">this</span>.contentsOpacity = <span class="number">0</span>;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.face_name != $gameMessage.faceName() || <span class="keyword">this</span>.face_index != $gameMessage.faceIndex())&#123;</div><div class="line">            <span class="keyword">if</span> (!!<span class="keyword">this</span>._messageWindow._event_pop_id || <span class="keyword">this</span>._messageWindow._event_pop_id === <span class="number">0</span>) &#123;</div><div class="line">                <span class="keyword">this</span>.x = - <span class="number">60</span>;</div><div class="line">                <span class="keyword">this</span>.move_x = <span class="number">60</span>;</div><div class="line">            &#125;;</div><div class="line">            <span class="keyword">this</span>.face_name = $gameMessage.faceName();</div><div class="line">            <span class="keyword">this</span>.face_index = $gameMessage.faceIndex();</div><div class="line">        &#125;;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> _messageWindowUpdateOpen = Window_Message.prototype.updateOpen;</div><div class="line">    Window_Message.prototype.updateOpen = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (SceneManager._scene.constructor === Scene_Map) &#123;</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>._opening) &#123;</div><div class="line">                <span class="keyword">this</span>.openness += <span class="number">32</span>;</div><div class="line">                <span class="keyword">if</span> (<span class="keyword">this</span>.isOpen()) &#123;</div><div class="line">                    <span class="keyword">this</span>._opening = <span class="literal">false</span>;</div><div class="line">                    <span class="keyword">if</span> (<span class="keyword">this</span>._messageBubbleTag._isShow) &#123;</div><div class="line">                        <span class="keyword">this</span>._messageBubbleTag.visible = <span class="literal">true</span>;</div><div class="line">                        <span class="keyword">this</span>._messageBubbleTag._isShow = <span class="literal">false</span>;</div><div class="line">                    &#125;;</div><div class="line">                &#125;;</div><div class="line">            &#125;;</div><div class="line">        &#125; <span class="keyword">else</span>&#123;</div><div class="line">            _messageWindowUpdateOpen.call(<span class="keyword">this</span>);</div><div class="line">        &#125;;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> _messageWindowClose = Window_Message.prototype.close;</div><div class="line">    Window_Message.prototype.close = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        _messageWindowClose.call(<span class="keyword">this</span>);</div><div class="line">        <span class="keyword">if</span> (SceneManager._scene.constructor === Scene_Map) &#123;</div><div class="line">            <span class="keyword">this</span>._messageBubbleTag.visible = <span class="literal">false</span>;</div><div class="line">            <span class="keyword">this</span>._faceWindow.contents.clear();</div><div class="line">            <span class="keyword">this</span>._faceWindow.close();</div><div class="line">        &#125;;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> _messageWindowInitialize = Window_Message.prototype.initialize</div><div class="line">    Window_Message.prototype.initialize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        _messageWindowInitialize.call(<span class="keyword">this</span>);</div><div class="line">        <span class="keyword">this</span>._faceWindow = <span class="keyword">new</span> Window_Message_Face(<span class="keyword">this</span>);</div><div class="line">        <span class="keyword">this</span>.addChild(<span class="keyword">this</span>._faceWindow);</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> _messageWindowUpdate = Window_Message.prototype.update</div><div class="line">    Window_Message.prototype.update = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        _messageWindowUpdate.call(<span class="keyword">this</span>);</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>._faceWindow) &#123;<span class="keyword">this</span>._faceWindow.update()&#125;;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> _createMessageWindowBubbleTag = Scene_Map.prototype.createMessageWindow</div><div class="line">    Scene_Map.prototype.createMessageWindow = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        _createMessageWindowBubbleTag.call(<span class="keyword">this</span>);</div><div class="line">        <span class="keyword">var</span> bubbleTag = <span class="keyword">new</span> Sprite();</div><div class="line">        bubbleTag.bitmap = ImageManager.loadSystem(bubbleTagName);</div><div class="line">        <span class="keyword">this</span>._messageWindow._messageBubbleTag = bubbleTag;</div><div class="line">        <span class="keyword">this</span>.addChild(bubbleTag);</div><div class="line">        <span class="keyword">this</span>._messageWindow._messageBubbleTag.visible = <span class="literal">false</span>;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> _convertEscapeCharacters = Window_Message.prototype.convertEscapeCharacters;</div><div class="line">    Window_Message.prototype.convertEscapeCharacters = <span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.resetWindowMessage();</div><div class="line">        text = _convertEscapeCharacters.call(<span class="keyword">this</span>,text);</div><div class="line">        text = text.replace(<span class="regexp">/\x1bBM\[(\d+)\]/gi</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.event_pop_message_setup(<span class="built_in">parseInt</span>(<span class="built_in">arguments</span>[<span class="number">1</span>]));</div><div class="line">        &#125;.bind(<span class="keyword">this</span>));</div><div class="line">        text = text.replace(<span class="regexp">/\x1bBMF\[(\d+)\]/gi</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.event_pop_message_setup(<span class="built_in">parseInt</span>(<span class="built_in">arguments</span>[<span class="number">1</span>]), <span class="literal">true</span>);</div><div class="line">        &#125;.bind(<span class="keyword">this</span>));</div><div class="line">        text = text.replace(<span class="regexp">/\x1bCBM/gi</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.event_pop_message_setup(<span class="literal">false</span>, <span class="literal">true</span>);</div><div class="line">        &#125;.bind(<span class="keyword">this</span>));</div><div class="line">        <span class="keyword">return</span> text;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> _updatePlacement = Window_Message.prototype.updatePlacement;</div><div class="line">    Window_Message.prototype.updatePlacement = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (SceneManager._scene.constructor === Scene_Map) &#123;</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>._event_pop_id === <span class="number">0</span>)&#123;</div><div class="line">                <span class="keyword">this</span>._character = !!<span class="keyword">this</span>._follower ? $gamePlayer : $gameMap.event($gameMap._interpreter.eventId());</div><div class="line">                <span class="keyword">this</span>.popSetPopPlacement(<span class="keyword">this</span>._character);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">this</span>._event_pop_id &gt; <span class="number">0</span>)&#123;</div><div class="line">                <span class="keyword">if</span> (!!<span class="keyword">this</span>._follower)&#123;</div><div class="line">                    <span class="keyword">this</span>._character = $gamePlayer.followers().follower(<span class="keyword">this</span>._event_pop_id - <span class="number">1</span>);</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    <span class="keyword">this</span>._character = $gameMap.event(<span class="keyword">this</span>._event_pop_id);</div><div class="line">                &#125;;  <span class="keyword">this</span>.popSetPopPlacement(<span class="keyword">this</span>._character);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                _updatePlacement.call(<span class="keyword">this</span>);</div><div class="line">            &#125;;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            _updatePlacement.call(<span class="keyword">this</span>);</div><div class="line">        &#125;;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>._faceWindow) &#123;</div><div class="line">            <span class="keyword">this</span>._faceWindow.setFace();</div><div class="line">        &#125;;</div><div class="line">    &#125;;</div><div class="line">    Window_Message.prototype.resetWindowMessage = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">this</span>.x = <span class="number">0</span>;</div><div class="line">        <span class="keyword">this</span>._follower = <span class="literal">false</span>;</div><div class="line">        <span class="keyword">this</span>._character = <span class="literal">false</span>;</div><div class="line">        <span class="keyword">this</span>._event_pop_id = <span class="literal">false</span>;</div><div class="line">        <span class="keyword">this</span>.width  = <span class="keyword">this</span>.windowWidth();</div><div class="line">        <span class="keyword">this</span>.height = <span class="keyword">this</span>.windowHeight();</div><div class="line">    &#125;</div><div class="line">    Window_Message.prototype.event_pop_message_setup = <span class="function"><span class="keyword">function</span>(<span class="params">event_id, follower</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (follower &amp;&amp; !$gamePlayer.followers().follower(event_id - <span class="number">1</span>)) &#123;</div><div class="line">            <span class="keyword">this</span>._event_pop_id = follower ? <span class="number">0</span> : <span class="literal">false</span>;</div><div class="line">            <span class="keyword">this</span>._follower = <span class="literal">true</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">this</span>._event_pop_id = event_id;</div><div class="line">            <span class="keyword">this</span>._follower = follower;</div><div class="line">        &#125;; <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">    &#125;;</div><div class="line">    Window_Message.prototype.popSetPopPlacement = <span class="function"><span class="keyword">function</span>(<span class="params">character</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.popcaltextStateHW($gameMessage.allText());</div><div class="line">        <span class="keyword">this</span>._messageBubbleTag._isShow = <span class="literal">true</span>;</div><div class="line">        <span class="keyword">var</span> x = character.screenX() - <span class="keyword">this</span>.width / <span class="number">2</span>;</div><div class="line">        <span class="keyword">var</span> endX = character.screenX() + <span class="keyword">this</span>.width / <span class="number">2</span>;</div><div class="line">        <span class="keyword">this</span>.x = x &gt; <span class="number">0</span> ? x : <span class="number">0</span>;</div><div class="line">        <span class="keyword">if</span>(endX &gt; Graphics.boxWidth)&#123; <span class="keyword">this</span>.x = Graphics.boxWidth - <span class="keyword">this</span>.width&#125;;</div><div class="line">        <span class="keyword">this</span>._bubblePosTag = character.screenY() &gt; Graphics.boxHeight / <span class="number">2</span> ? <span class="literal">true</span> : <span class="literal">false</span>;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>._bubblePosTag) &#123;</div><div class="line">            <span class="keyword">this</span>.y = character.screenY() - <span class="keyword">this</span>.height - <span class="number">60</span> + <span class="built_in">parseInt</span>(topMessageReviseY);</div><div class="line">            <span class="keyword">this</span>._messageBubbleTag.y = character.screenY() - <span class="number">65</span> + <span class="built_in">parseInt</span>(topTagReviseY);</div><div class="line">        &#125; <span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">this</span>.y = character.screenY() + <span class="number">14</span> + <span class="built_in">parseInt</span>(bottomMessageReviseY);</div><div class="line">            <span class="keyword">this</span>._messageBubbleTag.y = character.screenY() + <span class="built_in">parseInt</span>(bottomTagReviseY);</div><div class="line">        &#125;;</div><div class="line">        <span class="keyword">this</span>.setBubbleTag(character);</div><div class="line">    &#125;;</div><div class="line">    Window_Message.prototype.setBubbleTag = <span class="function"><span class="keyword">function</span>(<span class="params">character</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> width = <span class="keyword">this</span>._messageBubbleTag.width;</div><div class="line">        <span class="keyword">var</span> height = <span class="keyword">this</span>._messageBubbleTag.bitmap.height / <span class="number">2</span>;</div><div class="line">        <span class="keyword">var</span> y = !<span class="keyword">this</span>._bubblePosTag ? height : <span class="number">0</span>;</div><div class="line">        <span class="keyword">this</span>._opening = <span class="literal">true</span>;</div><div class="line">        <span class="keyword">this</span>._messageBubbleTag.setFrame(<span class="number">0</span> ,y ,width ,height);</div><div class="line">        <span class="keyword">this</span>._messageBubbleTag.x = character.screenX() - width / <span class="number">2</span>;</div><div class="line">    &#125;;</div><div class="line">    Window_Message.prototype.popcaltextStateHW = <span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> leftX = $gameMessage.faceName() === <span class="string">''</span> ? <span class="number">0</span> : <span class="number">172</span>;</div><div class="line">        <span class="keyword">var</span> textState = &#123; <span class="attr">index</span>: <span class="number">0</span>, <span class="attr">x</span>: leftX, <span class="attr">y</span>: <span class="number">0</span>, <span class="attr">width</span>: <span class="number">0</span>, <span class="attr">left</span>: leftX &#125;;</div><div class="line">        textState.text = <span class="keyword">this</span>.convertEscapeCharacters(text);</div><div class="line">        textState.y = <span class="keyword">this</span>.calcTextHeight(textState, <span class="literal">false</span>);</div><div class="line">        <span class="keyword">while</span> (textState.index &lt; textState.text.length) &#123;</div><div class="line">            <span class="keyword">this</span>.popReadCharacter(textState);</div><div class="line">        &#125;;</div><div class="line">        <span class="keyword">this</span>.resetFontSettings();</div><div class="line">        <span class="keyword">this</span>.height = textState.height + <span class="number">36</span>;</div><div class="line">        <span class="keyword">this</span>.width  = textState.width  + <span class="number">36</span>;</div><div class="line">    &#125;;</div><div class="line">    Window_Message.prototype.popReadCharacter = <span class="function"><span class="keyword">function</span>(<span class="params">textState</span>) </span>&#123;</div><div class="line">        <span class="keyword">switch</span> (textState.text[textState.index]) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="string">'\n'</span>:</div><div class="line">            textState.x = textState.left;</div><div class="line">            textState.y += <span class="keyword">this</span>.calcTextHeight(textState, <span class="literal">false</span>);</div><div class="line">            textState.index++;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="string">'\f'</span>:</div><div class="line">             textState.index++;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="string">'\x1b'</span>:</div><div class="line">            <span class="keyword">switch</span> (<span class="keyword">this</span>.obtainEscapeCode(textState))&#123;</div><div class="line">            <span class="keyword">case</span> <span class="string">'C'</span>:</div><div class="line">                <span class="keyword">this</span>.obtainEscapeParam(textState);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">'I'</span>:</div><div class="line">                <span class="keyword">this</span>.obtainEscapeParam(textState);</div><div class="line">                textState.x += Window_Base._iconWidth + <span class="number">4</span>;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">'&#123;'</span>:</div><div class="line">                <span class="keyword">if</span> (<span class="keyword">this</span>.contents.fontSize &lt;= <span class="number">96</span>) &#123; <span class="keyword">this</span>.contents.fontSize += <span class="number">12</span>; &#125;;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">'&#125;'</span>:</div><div class="line">                <span class="keyword">if</span> (<span class="keyword">this</span>.contents.fontSize &gt;= <span class="number">24</span>) &#123; <span class="keyword">this</span>.contents.fontSize -= <span class="number">12</span>; &#125;;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">            textState.x += <span class="keyword">this</span>.textWidth(textState.text[textState.index++]);</div><div class="line">            textState.width = textState.width &gt; textState.x ? textState.width : textState.x;</div><div class="line">            textState.height = textState.height &gt; textState.y ? textState.height : textState.y;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> _drawMessageFace = Window_Message.prototype.drawMessageFace;</div><div class="line">    Window_Message.prototype.drawMessageFace = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/Hexo/categories/JGSS1/">JGSS1</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/Hexo/tags/RMMV/">RMMV</a><a href="/Hexo/tags/对话框脚本/">对话框脚本</a>
+  </div>
+
+</div>
+
+
+
+	
+		<div class="article-share" id="share">
+		
+		  <div data-url="http://VIPArcher.github.io/Hexo/2015/12/22/VIPArcher_Bubble_Message.js/" data-title="MV气泡吹出对话框 | 命运停驻之地" data-tsina="2209859500" class="share clearfix">
+		  </div>
+		
+		</div>
+	
+
+
+</footer>
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/Hexo/2015/12/22/VIPArcher_Character_Animations.js/" title="MV移动动画扩展（真·八方向移动）">
+  <strong>上一篇：</strong><br/>
+  <span>
+  MV移动动画扩展（真·八方向移动）</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/Hexo/2015/12/19/VIPArcher_SkipTitle/"  title="MV跳过标题插件">
+ <strong>下一篇：</strong><br/> 
+ <span>MV跳过标题插件
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/12/22/VIPArcher_Bubble_Message.js/" data-title="MV气泡吹出对话框" data-url="http://VIPArcher.github.io/Hexo/2015/12/22/VIPArcher_Bubble_Message.js/"></div>
+</section>
+
+
+</div>
+        <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart" class="card">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="weiboshow">
+  <p class="asidetitle">我的微博</p>
+	<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=&height=&fansRow=1&ptype=0&speed=0&skin=9&isTitle=0&noborder=1&isWeibo=0&isFans=0&uid=2209859500&verifier=a2e3df32&colors=ffffff,ffffff,666666,0082cb,ecfbfd&dpc=1">这里本来应该显示一个微博秀</iframe>
+</div>
+
+  <div class="musicshow">
+  <p class="asidetitle">Music!</p>
+  <embed id="musicEmbed" type="application/x-shockwave-flash" width="190" height="275" wmode="opaque"></embed>
+  <script type="text/javascript">
+  	(function(){
+	  function playMusic(list){
+	    document.getElementById("musicEmbed").src = 'https://www.xiami.com/widget/49935010_' +
+	    list + '_190_300_2CA6CB_F1F1F1_1/multiPlayer.swf'
+	  }
+	  function randPlayList(max){
+	    var list = [1775863928,1769509693,3035981,1769340552,3435904,1769304758,1769462115,1769304758,1771526122,1770554727,1769605529,1770728495,1769701059,1772515105,1770102834,368272].sort(function(){ return 0.5 - Math.random() })
+	      return list.slice(0,max).join(',')
+	  }
+	  playMusic(randPlayList(10))
+	})()
+  </script>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/Hexo/categories/JGSS1/" title="JGSS1">JGSS1<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/Hexo/categories/RGSS3/" title="RGSS3">RGSS3<sup>30</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/Hexo/tags/RMVA/" title="RMVA">RMVA<!--sup>30</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/地图效果/" title="地图效果">地图效果<!--sup>12</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/系统脚本/" title="系统脚本">系统脚本<!--sup>8</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/战斗脚本/" title="战斗脚本">战斗脚本<!--sup>4</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/RMMV/" title="RMMV">RMMV<!--sup>3</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/菜单脚本/" title="菜单脚本">菜单脚本<!--sup>3</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/跳过标题/" title="跳过标题">跳过标题<!--sup>2</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/菜单效果/" title="菜单效果">菜单效果<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/对话框脚本/" title="对话框脚本">对话框脚本<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/便捷脚本/" title="便捷脚本">便捷脚本<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/基础脚本/" title="基础脚本">基础脚本<!--sup>1</sup--></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/Hexo/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">有趣的地方</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://rm.66rpg.com/" target="_blank" title="梦想世界，在你手中">66RPG</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://seiran.mist.so/" target="_blank" title="晴兰的秘密社团">Seiran</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://taroxd.github.io/" target="_blank" title="Taroxd's Blog">Taroxd</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://hyrious.github.io/" target="_blank" title="喵喵喵的沟">喵喵喵的沟</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://miaowm5.coding.me/script-blog/list.html" target="_blank" title="喵呜喵5的原创脚本列表">喵污的脚本列表</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://rmproject.lofter.com/hello" target="_blank" title="授权素材推广计划">授权素材推广计划</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+      </div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Free RPG Maker Scripts <br/>
+			More Things About RPG Maker</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/VIPArcher" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/VIPArcher" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:VIPArcher@sina.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" target="_blank">
+            <img src="/Hexo/img/cc-by-nc-sa.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+	<p class="copyright">Powered by 
+		<a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 
+		2017 
+		
+			<a href="/Hexo/about" target="_blank" title="VIPArcher">VIPArcher</a>
+		
+	</p>
+</div>
+</footer>
+  </body>
+  <script src="/Hexo/js/jquery-2.0.3.min.js"></script>
+<script src="/Hexo/js/jquery.imagesloaded.min.js"></script>
+<script src="/Hexo/js/gallery.js"></script>
+<script src="/Hexo/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"viparcher"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Hexo/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/Hexo/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e7773379953bb5491e404334f9c05797";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/Hexo/img/scrollup.png"/></a>
+	</div>
+	<script src="/Hexo/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<!-- console.log("By VIPArcher") -->
+<script>ﾟωﾟﾉ= /｀ｍ´）ﾉ ~┻━┻   //*´∇｀*/ ['_']; o=(ﾟｰﾟ)  =_=3; c=(ﾟΘﾟ) =(ﾟｰﾟ)-(ﾟｰﾟ); (ﾟДﾟ) =(ﾟΘﾟ)= (o^_^o)/ (o^_^o);(ﾟДﾟ)={ﾟΘﾟ: '_' ,ﾟωﾟﾉ : ((ﾟωﾟﾉ==3) +'_') [ﾟΘﾟ] ,ﾟｰﾟﾉ :(ﾟωﾟﾉ+ '_')[o^_^o -(ﾟΘﾟ)] ,ﾟДﾟﾉ:((ﾟｰﾟ==3) +'_')[ﾟｰﾟ] }; (ﾟДﾟ) [ﾟΘﾟ] =((ﾟωﾟﾉ==3) +'_') [c^_^o];(ﾟДﾟ) ['c'] = ((ﾟДﾟ)+'_') [ (ﾟｰﾟ)+(ﾟｰﾟ)-(ﾟΘﾟ) ];(ﾟДﾟ) ['o'] = ((ﾟДﾟ)+'_') [ﾟΘﾟ];(ﾟoﾟ)=(ﾟДﾟ) ['c']+(ﾟДﾟ) ['o']+(ﾟωﾟﾉ +'_')[ﾟΘﾟ]+ ((ﾟωﾟﾉ==3) +'_') [ﾟｰﾟ] + ((ﾟДﾟ) +'_') [(ﾟｰﾟ)+(ﾟｰﾟ)]+ ((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+((ﾟｰﾟ==3) +'_') [(ﾟｰﾟ) - (ﾟΘﾟ)]+(ﾟДﾟ) ['c']+((ﾟДﾟ)+'_') [(ﾟｰﾟ)+(ﾟｰﾟ)]+ (ﾟДﾟ) ['o']+((ﾟｰﾟ==3) +'_') [ﾟΘﾟ];(ﾟДﾟ) ['_'] =(o^_^o) [ﾟoﾟ] [ﾟoﾟ];(ﾟεﾟ)=((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+ (ﾟДﾟ) .ﾟДﾟﾉ+((ﾟДﾟ)+'_') [(ﾟｰﾟ) + (ﾟｰﾟ)]+((ﾟｰﾟ==3) +'_') [o^_^o -ﾟΘﾟ]+((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+ (ﾟωﾟﾉ +'_') [ﾟΘﾟ]; (ﾟｰﾟ)+=(ﾟΘﾟ); (ﾟДﾟ)[ﾟεﾟ]='\\'; (ﾟДﾟ).ﾟΘﾟﾉ=(ﾟДﾟ+ ﾟｰﾟ)[o^_^o -(ﾟΘﾟ)];(oﾟｰﾟo)=(ﾟωﾟﾉ +'_')[c^_^o];(ﾟДﾟ) [ﾟoﾟ]='\"';(ﾟДﾟ) ['_'] ( (ﾟДﾟ) ['_'] (ﾟεﾟ+(ﾟДﾟ)[ﾟoﾟ]+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟΘﾟ)+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟoﾟ]) (ﾟΘﾟ)) ('_');</script>
+</html>

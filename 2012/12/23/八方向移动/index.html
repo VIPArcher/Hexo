@@ -1,0 +1,562 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>八方向移动 | 命运停驻之地</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="VIPArcher">
+    
+
+    
+    <meta name="description" content="在新窗口中打开脚本页">
+<meta property="og:type" content="article">
+<meta property="og:title" content="八方向移动">
+<meta property="og:url" content="http://VIPArcher.github.io/2012/12/23/八方向移动/index.html">
+<meta property="og:site_name" content="命运停驻之地">
+<meta property="og:description" content="在新窗口中打开脚本页">
+<meta property="og:updated_time" content="2016-12-24T08:25:34.407Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="八方向移动">
+<meta name="twitter:description" content="在新窗口中打开脚本页">
+
+    
+    <link rel="alternative" href="/Hexo/atom.xml" title="命运停驻之地" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/Hexo/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/Hexo/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/Hexo/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/Hexo/css/style.css">
+</head>
+
+  <body>
+    <div id="content" class="viewport">
+      <header class="card">
+        
+<div>
+	
+		<div id="textlogo">
+			<h1 class="site-name"><a href="/Hexo/" title="命运停驻之地">命运停驻之地</a></h1>
+			<h2 class="blog-motto">VIPArcher的个人博客，基本上存放的都是 RPG Maker 的插件脚本。偶尔日常水~</h2>
+		</div>
+		<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+		</a></div>
+		<nav class="animated">
+			<ul>
+				<ul>
+				 
+					<li><a href="/Hexo/">首页</a></li>
+				
+					<li><a href="/Hexo/archives">归档</a></li>
+				
+					<li><a href="/Hexo/rules">注意及规约</a></li>
+				
+					<li><a href="/Hexo/about">关于我</a></li>
+				
+					<li><a href="http://rm.66rpg.com/home.php?mod=space&uid=336539">6R空间</a></li>
+				
+			</ul>
+		</nav>
+</div>
+      </header>
+      <div id="container">
+        <div id="main" class="card post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/Hexo/2012/12/23/八方向移动/" title="八方向移动" itemprop="url">八方向移动</a>
+    
+  </h1>
+  
+    <p class="article-author">By
+      
+  		  <a href="/Hexo/about" title="VIPArcher" target="_blank" itemprop="author">VIPArcher</a>
+  		
+    </p>
+    <p class="article-time">
+      <time datetime="2012-12-23T04:00:00.000Z" itemprop="datePublished"> 发表于 2012-12-23</time>
+    </p>
+  
+</header>
+	<div class="article-content">
+		
+		<p><a href="https://raw.githubusercontent.com/VIPArcher/RGSS3/master/scripts/八方向移动.rb" target="_blank" rel="external">在新窗口中打开脚本页</a><br><a id="more"></a><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#===============================================================================</span></div><div class="line"><span class="comment"># ■ 八方向移动行走图动画扩展</span></div><div class="line"><span class="comment"># by ：VIPArcher [email: VIPArcher<span class="doctag">@sina</span>.com]</span></div><div class="line"><span class="comment">#  -- 本脚本来自 http://rm.66rpg.com 使用或转载请保留以上信息。</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ■ 使用说明：</span></div><div class="line"><span class="comment">#   行走图素材文件名最前面添加 '@'符号视为该角色/事件使用八方向行走图</span></div><div class="line"><span class="comment">#   素材规格为2 * 4角色元的素材，其中第一角色元为正常状态行走图，下面</span></div><div class="line"><span class="comment">#   也就是第五角色元为对应的斜向行走图，第二角色元为奔跑时行走图，下面</span></div><div class="line"><span class="comment">#   也就是第六角色元为对应奔跑时斜向行走图，第三角色元为站立一段时间后</span></div><div class="line"><span class="comment">#   待机播放的踏步行走图，下面也就是第七角色元为对应斜向踏步行走图。</span></div><div class="line"><span class="comment">#          例如  <span class="doctag">@Actor</span>1.png :</span></div><div class="line"><span class="comment">#         ┌───┬───┬───┬───┐</span></div><div class="line"><span class="comment">#         │　步　│　奔　│　待　│　　　│</span></div><div class="line"><span class="comment">#         │　行　│　跑　│　机　│　　　│</span></div><div class="line"><span class="comment">#         │　行　│　行　│　行　│　　　│</span></div><div class="line"><span class="comment">#         │　走　│　走　│　走　│　　　│</span></div><div class="line"><span class="comment">#         │　图　│　图　│　图　│　　　│</span></div><div class="line"><span class="comment">#         ├───┼───┼───┼───┤</span></div><div class="line"><span class="comment">#         │　斜　│　斜　│　斜　│　　　│</span></div><div class="line"><span class="comment">#         │　向　│　向　│　向　│　　　│</span></div><div class="line"><span class="comment">#         │　步　│　奔　│　待　│　　　│</span></div><div class="line"><span class="comment">#         │　行　│　跑　│　机　│　　　│</span></div><div class="line"><span class="comment">#         └───┴───┴───┴───┘</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line">$VIPArcherScript <span class="params">||</span>= &#123;&#125;;$VIPArcherScript[<span class="symbol">:dir8_move</span>] = <span class="number">20161106</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ★ 设定部分 ★</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">module</span> <span class="title">VIPArcher</span> <span class="title">end</span></span></div><div class="line"><span class="class"><span class="keyword">module</span> <span class="title">VIPArcher::Dir_8</span></span></div><div class="line">  OFF_SW = <span class="number">0</span>        <span class="comment"># 控制关闭八方向行走的开关</span></div><div class="line">  STEP_ANIME_SW = <span class="number">1</span> <span class="comment"># 控制待机动画启用的开关</span></div><div class="line">  WAIT_TIME  = <span class="number">150</span>  <span class="comment"># 静止后进入待机动画的时间(帧)</span></div><div class="line">  ANIME_TIME = <span class="number">25</span>   <span class="comment"># 待机动画播放的时长(帧)</span></div><div class="line">  GAP_TIME   = <span class="number">90</span>   <span class="comment"># 两次待机动画之间的时间间隔</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ■ Game_Player</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game_Player</span></span></div><div class="line">  <span class="keyword">include</span> VIPArcher::Dir_8</div><div class="line">  <span class="keyword">attr_reader</span>   <span class="symbol">:static_anime</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 由方向键移动</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">move_by_input</span></span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">if</span> !movable? <span class="params">||</span> $game_map.interpreter.running?</div><div class="line">    <span class="keyword">if</span> [<span class="number">1</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">9</span>].<span class="keyword">include</span>?(Input.dir8)</div><div class="line">      <span class="keyword">case</span> Input.dir8</div><div class="line">      <span class="keyword">when</span> <span class="number">1</span> <span class="keyword">then</span> move_diagonal(<span class="number">4</span>, <span class="number">2</span>)</div><div class="line">      <span class="keyword">when</span> <span class="number">3</span> <span class="keyword">then</span> move_diagonal(<span class="number">6</span>, <span class="number">2</span>)</div><div class="line">      <span class="keyword">when</span> <span class="number">7</span> <span class="keyword">then</span> move_diagonal(<span class="number">4</span>, <span class="number">8</span>)</div><div class="line">      <span class="keyword">when</span> <span class="number">9</span> <span class="keyword">then</span> move_diagonal(<span class="number">6</span>, <span class="number">8</span>)</div><div class="line">      <span class="keyword">end</span>; <span class="keyword">return</span> <span class="keyword">if</span> @move_succeed</div><div class="line">    <span class="keyword">end</span> unless $game_switches[OFF_SW]</div><div class="line">    move_straight(Input.dir4) <span class="keyword">if</span> Input.dir4 &gt; <span class="number">0</span></div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 是否奔跑中</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">is_dash?</span></span></div><div class="line">    <span class="keyword">return</span> dash? &amp;&amp; @stop_count.zero?</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 更新画面</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> dir8_update update</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">update</span></span></div><div class="line">    dir8_update</div><div class="line">    <span class="keyword">return</span> <span class="keyword">if</span> $game_switches[STEP_ANIME_SW]</div><div class="line">    @step_anime = <span class="keyword">case</span> @stop_count</div><div class="line">    <span class="keyword">when</span> WAIT_TIME...WAIT_TIME + ANIME_TIME <span class="keyword">then</span> @static_anime = <span class="literal">true</span></div><div class="line">    <span class="keyword">when</span> WAIT_TIME + ANIME_TIME <span class="keyword">then</span> @stop_count = WAIT_TIME - GAP_TIME</div><div class="line">    @static_anime = <span class="literal">false</span> <span class="keyword">else</span> @static_anime = <span class="literal">false</span> <span class="keyword">end</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ■ Game_Event</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game_Event</span></span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 是否奔跑中</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">is_dash?</span></span></div><div class="line">    <span class="keyword">return</span> !@locked &amp;&amp; @move_speed &gt;= <span class="number">5</span> &amp;&amp; @stop_count.zero? </div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ■ Game_CharacterBase</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game_CharacterBase</span></span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 斜向移动</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">alias</span> dir8_move_diagonal move_diagonal</div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">move_diagonal</span><span class="params">(horz, vert)</span></span></div><div class="line">    <span class="keyword">return</span> @move_succeed = <span class="literal">false</span> <span class="keyword">if</span> !passable?(@x, @y, horz) &amp;&amp; !passable?(@x, @y, vert)</div><div class="line">    <span class="keyword">return</span> move_straight(horz) <span class="keyword">if</span> passable?(@x, @y, horz) &amp;&amp; !passable?(@x, @y, vert)</div><div class="line">    <span class="keyword">return</span> move_straight(vert) <span class="keyword">if</span> passable?(@x, @y, vert) &amp;&amp; !passable?(@x, @y, horz)</div><div class="line">    dir8_move_diagonal(horz, vert)</div><div class="line">    <span class="keyword">case</span> [horz,vert]</div><div class="line">    <span class="keyword">when</span> [<span class="number">4</span>,<span class="number">2</span>] <span class="keyword">then</span> set_direction(<span class="number">1</span>)</div><div class="line">    <span class="keyword">when</span> [<span class="number">4</span>,<span class="number">8</span>] <span class="keyword">then</span> set_direction(<span class="number">3</span>)</div><div class="line">    <span class="keyword">when</span> [<span class="number">6</span>,<span class="number">2</span>] <span class="keyword">then</span> set_direction(<span class="number">7</span>)</div><div class="line">    <span class="keyword">when</span> [<span class="number">6</span>,<span class="number">8</span>] <span class="keyword">then</span> set_direction(<span class="number">9</span>)</div><div class="line">    <span class="keyword">end</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># ■ Sprite_Character</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sprite_Character</span> &lt; Sprite_Base</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 是否是八方向素材</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">is_dir8?</span></span></div><div class="line">    <span class="keyword">return</span> @character_name =~ <span class="regexp">/^\@.+/</span></div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 更新源矩形</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">update_src_rect</span></span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">if</span> @tile_id != <span class="number">0</span></div><div class="line">    index = @character.character_index</div><div class="line">    pattern = @character.pattern &lt; <span class="number">3</span> ? @character.pattern : <span class="number">1</span></div><div class="line">    index = <span class="keyword">if</span> @character.is_dash? <span class="keyword">then</span> <span class="number">1</span></div><div class="line">    <span class="keyword">elsif</span> @character.instance_of?(Game_Player) &amp;&amp; $game_player.static_anime</div><div class="line">    <span class="number">2</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span> <span class="keyword">if</span> is_dir8?</div><div class="line">    sx = (index % <span class="number">4</span> * <span class="number">3</span> + pattern) * @cw</div><div class="line">    unless @character.direction.even?</div><div class="line">      index += <span class="number">4</span> <span class="keyword">if</span> is_dir8?</div><div class="line">      sy = (index / <span class="number">4</span> * <span class="number">4</span> + (@character.direction + <span class="number">1</span>) / <span class="number">3</span>) * @ch</div><div class="line">    <span class="keyword">else</span></div><div class="line">      sy = (index / <span class="number">4</span> * <span class="number">4</span> + (@character.direction - <span class="number">2</span>) / <span class="number">2</span>) * @ch</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">self</span>.src_rect.set(sx, sy, @cw, @ch)</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/Hexo/categories/RGSS3/">RGSS3</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/Hexo/tags/地图效果/">地图效果</a><a href="/Hexo/tags/RMVA/">RMVA</a>
+  </div>
+
+</div>
+
+
+
+	
+		<div class="article-share" id="share">
+		
+		  <div data-url="http://VIPArcher.github.io/Hexo/2012/12/23/八方向移动/" data-title="八方向移动 | 命运停驻之地" data-tsina="2209859500" class="share clearfix">
+		  </div>
+		
+		</div>
+	
+
+
+</footer>
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/Hexo/2012/12/23/VIPArcher基础设置/" title="VIPArcher基础设置">
+  <strong>上一篇：</strong><br/>
+  <span>
+  VIPArcher基础设置</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2012/12/23/八方向移动/" data-title="八方向移动" data-url="http://VIPArcher.github.io/Hexo/2012/12/23/八方向移动/"></div>
+</section>
+
+
+</div>
+        <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart" class="card">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="weiboshow">
+  <p class="asidetitle">我的微博</p>
+	<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=&height=&fansRow=1&ptype=0&speed=0&skin=9&isTitle=0&noborder=1&isWeibo=0&isFans=0&uid=2209859500&verifier=a2e3df32&colors=ffffff,ffffff,666666,0082cb,ecfbfd&dpc=1">这里本来应该显示一个微博秀</iframe>
+</div>
+
+  <div class="musicshow">
+  <p class="asidetitle">Music!</p>
+  <embed id="musicEmbed" type="application/x-shockwave-flash" width="190" height="275" wmode="opaque"></embed>
+  <script type="text/javascript">
+  	(function(){
+	  function playMusic(list){
+	    document.getElementById("musicEmbed").src = 'https://www.xiami.com/widget/49935010_' +
+	    list + '_190_300_2CA6CB_F1F1F1_1/multiPlayer.swf'
+	  }
+	  function randPlayList(max){
+	    var list = [1775863928,1769509693,3035981,1769340552,3435904,1769304758,1769462115,1769304758,1771526122,1770554727,1769605529,1770728495,1769701059,1772515105,1770102834,368272].sort(function(){ return 0.5 - Math.random() })
+	      return list.slice(0,max).join(',')
+	  }
+	  playMusic(randPlayList(10))
+	})()
+  </script>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/Hexo/categories/JGSS1/" title="JGSS1">JGSS1<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/Hexo/categories/RGSS3/" title="RGSS3">RGSS3<sup>30</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/Hexo/tags/RMVA/" title="RMVA">RMVA<!--sup>30</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/地图效果/" title="地图效果">地图效果<!--sup>12</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/系统脚本/" title="系统脚本">系统脚本<!--sup>8</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/战斗脚本/" title="战斗脚本">战斗脚本<!--sup>4</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/RMMV/" title="RMMV">RMMV<!--sup>3</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/菜单脚本/" title="菜单脚本">菜单脚本<!--sup>3</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/跳过标题/" title="跳过标题">跳过标题<!--sup>2</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/菜单效果/" title="菜单效果">菜单效果<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/对话框脚本/" title="对话框脚本">对话框脚本<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/便捷脚本/" title="便捷脚本">便捷脚本<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/基础脚本/" title="基础脚本">基础脚本<!--sup>1</sup--></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/Hexo/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">有趣的地方</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://rm.66rpg.com/" target="_blank" title="梦想世界，在你手中">66RPG</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://seiran.mist.so/" target="_blank" title="晴兰的秘密社团">Seiran</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://taroxd.github.io/" target="_blank" title="Taroxd's Blog">Taroxd</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://hyrious.github.io/" target="_blank" title="喵喵喵的沟">喵喵喵的沟</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://miaowm5.coding.me/script-blog/list.html" target="_blank" title="喵呜喵5的原创脚本列表">喵污的脚本列表</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://rmproject.lofter.com/hello" target="_blank" title="授权素材推广计划">授权素材推广计划</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+      </div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Free RPG Maker Scripts <br/>
+			More Things About RPG Maker</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/VIPArcher" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/VIPArcher" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:VIPArcher@sina.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" target="_blank">
+            <img src="/Hexo/img/cc-by-nc-sa.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+	<p class="copyright">Powered by 
+		<a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 
+		2017 
+		
+			<a href="/Hexo/about" target="_blank" title="VIPArcher">VIPArcher</a>
+		
+	</p>
+</div>
+</footer>
+  </body>
+  <script src="/Hexo/js/jquery-2.0.3.min.js"></script>
+<script src="/Hexo/js/jquery.imagesloaded.min.js"></script>
+<script src="/Hexo/js/gallery.js"></script>
+<script src="/Hexo/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"viparcher"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Hexo/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/Hexo/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e7773379953bb5491e404334f9c05797";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/Hexo/img/scrollup.png"/></a>
+	</div>
+	<script src="/Hexo/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<!-- console.log("By VIPArcher") -->
+<script>ﾟωﾟﾉ= /｀ｍ´）ﾉ ~┻━┻   //*´∇｀*/ ['_']; o=(ﾟｰﾟ)  =_=3; c=(ﾟΘﾟ) =(ﾟｰﾟ)-(ﾟｰﾟ); (ﾟДﾟ) =(ﾟΘﾟ)= (o^_^o)/ (o^_^o);(ﾟДﾟ)={ﾟΘﾟ: '_' ,ﾟωﾟﾉ : ((ﾟωﾟﾉ==3) +'_') [ﾟΘﾟ] ,ﾟｰﾟﾉ :(ﾟωﾟﾉ+ '_')[o^_^o -(ﾟΘﾟ)] ,ﾟДﾟﾉ:((ﾟｰﾟ==3) +'_')[ﾟｰﾟ] }; (ﾟДﾟ) [ﾟΘﾟ] =((ﾟωﾟﾉ==3) +'_') [c^_^o];(ﾟДﾟ) ['c'] = ((ﾟДﾟ)+'_') [ (ﾟｰﾟ)+(ﾟｰﾟ)-(ﾟΘﾟ) ];(ﾟДﾟ) ['o'] = ((ﾟДﾟ)+'_') [ﾟΘﾟ];(ﾟoﾟ)=(ﾟДﾟ) ['c']+(ﾟДﾟ) ['o']+(ﾟωﾟﾉ +'_')[ﾟΘﾟ]+ ((ﾟωﾟﾉ==3) +'_') [ﾟｰﾟ] + ((ﾟДﾟ) +'_') [(ﾟｰﾟ)+(ﾟｰﾟ)]+ ((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+((ﾟｰﾟ==3) +'_') [(ﾟｰﾟ) - (ﾟΘﾟ)]+(ﾟДﾟ) ['c']+((ﾟДﾟ)+'_') [(ﾟｰﾟ)+(ﾟｰﾟ)]+ (ﾟДﾟ) ['o']+((ﾟｰﾟ==3) +'_') [ﾟΘﾟ];(ﾟДﾟ) ['_'] =(o^_^o) [ﾟoﾟ] [ﾟoﾟ];(ﾟεﾟ)=((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+ (ﾟДﾟ) .ﾟДﾟﾉ+((ﾟДﾟ)+'_') [(ﾟｰﾟ) + (ﾟｰﾟ)]+((ﾟｰﾟ==3) +'_') [o^_^o -ﾟΘﾟ]+((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+ (ﾟωﾟﾉ +'_') [ﾟΘﾟ]; (ﾟｰﾟ)+=(ﾟΘﾟ); (ﾟДﾟ)[ﾟεﾟ]='\\'; (ﾟДﾟ).ﾟΘﾟﾉ=(ﾟДﾟ+ ﾟｰﾟ)[o^_^o -(ﾟΘﾟ)];(oﾟｰﾟo)=(ﾟωﾟﾉ +'_')[c^_^o];(ﾟДﾟ) [ﾟoﾟ]='\"';(ﾟДﾟ) ['_'] ( (ﾟДﾟ) ['_'] (ﾟεﾟ+(ﾟДﾟ)[ﾟoﾟ]+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟΘﾟ)+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟoﾟ]) (ﾟΘﾟ)) ('_');</script>
+</html>

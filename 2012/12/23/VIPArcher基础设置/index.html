@@ -1,0 +1,570 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>VIPArcher基础设置 | 命运停驻之地</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="VIPArcher">
+    
+
+    
+    <meta name="description" content="在新窗口中打开脚本页">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VIPArcher基础设置">
+<meta property="og:url" content="http://VIPArcher.github.io/2012/12/23/VIPArcher基础设置/index.html">
+<meta property="og:site_name" content="命运停驻之地">
+<meta property="og:description" content="在新窗口中打开脚本页">
+<meta property="og:updated_time" content="2016-12-27T06:30:53.359Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VIPArcher基础设置">
+<meta name="twitter:description" content="在新窗口中打开脚本页">
+
+    
+    <link rel="alternative" href="/Hexo/atom.xml" title="命运停驻之地" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/Hexo/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/Hexo/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/Hexo/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/Hexo/css/style.css">
+</head>
+
+  <body>
+    <div id="content" class="viewport">
+      <header class="card">
+        
+<div>
+	
+		<div id="textlogo">
+			<h1 class="site-name"><a href="/Hexo/" title="命运停驻之地">命运停驻之地</a></h1>
+			<h2 class="blog-motto">VIPArcher的个人博客，基本上存放的都是 RPG Maker 的插件脚本。偶尔日常水~</h2>
+		</div>
+		<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+		</a></div>
+		<nav class="animated">
+			<ul>
+				<ul>
+				 
+					<li><a href="/Hexo/">首页</a></li>
+				
+					<li><a href="/Hexo/archives">归档</a></li>
+				
+					<li><a href="/Hexo/rules">注意及规约</a></li>
+				
+					<li><a href="/Hexo/about">关于我</a></li>
+				
+					<li><a href="http://rm.66rpg.com/home.php?mod=space&uid=336539">6R空间</a></li>
+				
+			</ul>
+		</nav>
+</div>
+      </header>
+      <div id="container">
+        <div id="main" class="card post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/Hexo/2012/12/23/VIPArcher基础设置/" title="VIPArcher基础设置" itemprop="url">VIPArcher基础设置</a>
+    
+  </h1>
+  
+    <p class="article-author">By
+      
+  		  <a href="/Hexo/about" title="VIPArcher" target="_blank" itemprop="author">VIPArcher</a>
+  		
+    </p>
+    <p class="article-time">
+      <time datetime="2012-12-23T04:00:00.000Z" itemprop="datePublished"> 发表于 2012-12-23</time>
+    </p>
+  
+</header>
+	<div class="article-content">
+		
+		<p><a href="https://raw.githubusercontent.com/VIPArcher/RGSS3/master/scripts/VIPArcher基础设置.rb" target="_blank" rel="external">在新窗口中打开脚本页</a><br><a id="more"></a><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">module</span> <span class="title">VIPArcher</span></span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 需要的 Windows API 函数</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  GetWindowThreadProcessId = Win32API.new(<span class="string">'user32'</span>,   <span class="string">'GetWindowThreadProcessId'</span>, <span class="string">'lp'</span>,  <span class="string">'l'</span>)</div><div class="line">  GetWindow                = Win32API.new(<span class="string">'user32'</span>,   <span class="string">'GetWindow'</span>,                <span class="string">'ll'</span>,  <span class="string">'l'</span>)</div><div class="line">  GetClassName             = Win32API.new(<span class="string">'user32'</span>,   <span class="string">'GetClassName'</span>,             <span class="string">'lpl'</span>, <span class="string">'l'</span>)</div><div class="line">  GetWindowText            = Win32API.new(<span class="string">'user32'</span>,   <span class="string">'GetWindowText'</span>,            <span class="string">'lpl'</span>, <span class="string">'l'</span>)</div><div class="line">  GetCurrentThreadId       = Win32API.new(<span class="string">'kernel32'</span>, <span class="string">'GetCurrentThreadId'</span>,       <span class="string">'V'</span>,   <span class="string">'l'</span>)</div><div class="line">  GetForegroundWindow      = Win32API.new(<span class="string">'user32'</span>,   <span class="string">'GetForegroundWindow'</span>,      <span class="string">'V'</span>,   <span class="string">'l'</span>)</div><div class="line">  ShellExecuteA            = Win32API.new(<span class="string">'shell32'</span>,  <span class="string">'ShellExecuteA'</span>,         <span class="string">'pppppi'</span>, <span class="string">'i'</span>)</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取窗口句柄 by: 紫苏 </span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">get_window_handle</span></span></div><div class="line">    threadID = GetCurrentThreadId.call</div><div class="line">    hWnd = GetWindow.call(GetForegroundWindow.call, <span class="number">0</span>)</div><div class="line">    <span class="keyword">while</span> hWnd != <span class="number">0</span></div><div class="line">      <span class="keyword">if</span> threadID == GetWindowThreadProcessId.call(hWnd, <span class="number">0</span>)</div><div class="line">        className = <span class="string">" "</span> * <span class="number">11</span></div><div class="line">        GetClassName.call(hWnd, className, <span class="number">12</span>)</div><div class="line">        <span class="keyword">break</span> <span class="keyword">if</span> className == <span class="string">"RGSS Player"</span></div><div class="line">      <span class="keyword">end</span></div><div class="line">      hWnd = GetWindow.call(hWnd, <span class="number">2</span>)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> hWnd</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 打开地址</span></div><div class="line">  <span class="comment">#     VIPArcher.open_url(addr)</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">open_url</span><span class="params">(addr)</span></span></div><div class="line">    ShellExecuteA.call(<span class="number">0</span>,<span class="string">'open'</span>,addr,<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game_Interpreter</span></span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取事件显示的图片的 Bitmap 对象 不存在则返回 nil</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">get_bitmap</span><span class="params">(id = <span class="number">0</span>)</span></span></div><div class="line">    spriteset = SceneManager.scene.instance_variable_get(<span class="symbol">:</span>@spriteset)</div><div class="line">    sprite = spriteset.instance_variable_get(<span class="symbol">:</span>@picture_sprites)[id]</div><div class="line">    sprite ? sprite.bitmap : <span class="literal">nil</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="comment"># Game.ini 配置文件读取及设置</span></div><div class="line"><span class="comment">#==============================================================================</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">IniFile</span></span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 定义实例变量</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="keyword">attr_reader</span> <span class="symbol">:filename</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● Win32API</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  GetPrivateProfileString   = Win32API.new(<span class="string">'kernel32'</span>,<span class="string">'GetPrivateProfileString'</span>  , <span class="string">'ppppip'</span>, <span class="string">'i'</span>)</div><div class="line">  WritePrivateProfileString = Win32API.new(<span class="string">'kernel32'</span>,<span class="string">'WritePrivateProfileString'</span>, <span class="string">'pppp'</span>  , <span class="string">'i'</span>)</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 初始化对象</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(filename = <span class="string">'./Game.ini'</span>)</span></span></div><div class="line">    @filename = filename</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 获取配置</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">[]</span><span class="params">(section, key, default_value = <span class="string">''</span>)</span></span></div><div class="line">    l = GetPrivateProfileString.call(section, key, default_value, </div><div class="line">      buffer = [].pack(<span class="string">'x256'</span>), buffer.size, @filename); buffer[<span class="number">0</span>, l]</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 设置配置</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">[]=</span><span class="params">(section, key, value)</span></span></div><div class="line">    WritePrivateProfileString.call(section, key, value.to_s, @filename)</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">String</span></span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 常量定义</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  MultiByteToWideChar = Win32API.new(<span class="string">'kernel32'</span>, <span class="string">'MultiByteToWideChar'</span>, <span class="string">'ilpipi'</span>,   <span class="string">'i'</span>)</div><div class="line">  WideCharToMultiByte = Win32API.new(<span class="string">'kernel32'</span>, <span class="string">'WideCharToMultiByte'</span>, <span class="string">'ilpipipp'</span>, <span class="string">'i'</span>)</div><div class="line">  Codepages = &#123;</div><div class="line">    <span class="symbol">:System</span> =&gt; <span class="number">0</span>,     <span class="symbol">:UTF7</span>   =&gt; <span class="number">65000</span>, <span class="symbol">:UTF8</span>   =&gt; <span class="number">65001</span>,</div><div class="line">    <span class="symbol">:S_JIS</span>  =&gt; <span class="number">932</span>,   <span class="symbol">:GB2312</span> =&gt; <span class="number">936</span>,   <span class="symbol">:BIG5</span>   =&gt; <span class="number">950</span>, </div><div class="line">  &#125;</div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 伪 iconv 编码转换</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment">#     s : 原始编码，可使用 Codepages 中的符号或者直接使用代码页值。</span></div><div class="line">  <span class="comment">#     d : 目标编码，同上。</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">iconv</span> <span class="title">s</span>, <span class="title">d</span></span></div><div class="line">    src  = s.is_a?(Symbol)? Codepages[s] : s</div><div class="line">    dest = d.is_a?(Symbol)? Codepages[d] : d</div><div class="line">    len = MultiByteToWideChar.call src, <span class="number">0</span>, <span class="keyword">self</span>, -<span class="number">1</span>, <span class="literal">nil</span>, <span class="number">0</span></div><div class="line">    buf = <span class="string">"\0"</span> * (len * <span class="number">2</span>)</div><div class="line">    MultiByteToWideChar.call src, <span class="number">0</span>, <span class="keyword">self</span>, -<span class="number">1</span>, buf, buf.size / <span class="number">2</span></div><div class="line">    len = WideCharToMultiByte.call dest, <span class="number">0</span>, buf, -<span class="number">1</span>, <span class="literal">nil</span>, <span class="number">0</span>, <span class="literal">nil</span>, <span class="literal">nil</span></div><div class="line">    ret = <span class="string">"\0"</span> * len</div><div class="line">    WideCharToMultiByte.call dest, <span class="number">0</span>, buf, -<span class="number">1</span>, ret, ret.size, <span class="literal">nil</span>, <span class="literal">nil</span></div><div class="line">    <span class="keyword">self</span>.respond_to?(<span class="symbol">:force_encoding</span>) ?</div><div class="line">    ret.force_encoding(<span class="string">"ASCII-8BIT"</span>).delete(<span class="string">"\000"</span>) : ret.delete(<span class="string">"\000"</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 快捷方式：从 ANSI 转为 UTF-8 编码</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">s2u</span></span></div><div class="line">    <span class="keyword">self</span>.respond_to?(<span class="symbol">:force_encoding</span>) ?</div><div class="line">    iconv(<span class="symbol">:System</span>, <span class="symbol">:UTF8</span>).force_encoding(<span class="string">"utf-8"</span>) : iconv(<span class="symbol">:System</span>, <span class="symbol">:UTF8</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 快捷方式：从 UTF-8 转为 ANSI 编码</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">u2s</span></span></div><div class="line">    iconv(<span class="symbol">:UTF8</span>, <span class="symbol">:System</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">#--------------------------------------------------------------------------</span></div><div class="line"><span class="comment"># ● 备注的读取</span></div><div class="line"><span class="comment">#--------------------------------------------------------------------------</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">RPG::BaseItem</span></span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 读取备注的基本方法</span></div><div class="line">  <span class="comment">#     note     : 备注文字</span></div><div class="line">  <span class="comment">#     default  : 缺省值</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">renote</span><span class="params">(note,default = <span class="literal">nil</span>)</span></span></div><div class="line">    result = <span class="regexp">/&lt;<span class="subst">#&#123;note&#125;</span>\s+(\S+)\s*&gt;/</span> =~ @note ? $1 : default</div><div class="line">    result</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bitmap</span></span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="comment"># ● 由白色渐变到实际的字体颜色的渐变字</span></div><div class="line">  <span class="comment">#     level  : 渐变等级，值越高效果越差。效率越好。不可为 0</span></div><div class="line">  <span class="comment">#--------------------------------------------------------------------------</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">draw_gradient_text</span><span class="params">(x, y, w, h, str, align = <span class="number">0</span>, level = <span class="number">1</span>)</span></span></div><div class="line">    <span class="keyword">if</span> font.color == Color.new(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>)</div><div class="line">      draw_text(x, y, w, h, str, align); <span class="keyword">return</span> <span class="keyword">self</span></div><div class="line">    <span class="keyword">end</span>; buffer, buffer.font = Bitmap.new(w, h), font.dup</div><div class="line">    delta = (alpha = font.color.alpha) / h * level</div><div class="line">    buffer.font.out_color, buffer.font.shadow = Color.new, <span class="literal">false</span></div><div class="line">    rect, buffer.font.color = Rect.new(<span class="number">0</span>, <span class="number">0</span>, w, level), Color.new(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>)</div><div class="line">    draw_text(x, y, w, h, str, align); buffer.draw_text(<span class="number">0</span>, <span class="number">0</span>, w, h, str, align)</div><div class="line">    y.upto(y + h) &#123; <span class="params">|n|</span> <span class="keyword">next</span> unless n % level == <span class="number">0</span></div><div class="line">      blt(x, n, buffer, rect, alpha -= delta); rect.y += level</div><div class="line">    &#125;; buffer.dispose; <span class="keyword">self</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/Hexo/categories/RGSS3/">RGSS3</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/Hexo/tags/RMVA/">RMVA</a><a href="/Hexo/tags/基础脚本/">基础脚本</a>
+  </div>
+
+</div>
+
+
+
+	
+		<div class="article-share" id="share">
+		
+		  <div data-url="http://VIPArcher.github.io/Hexo/2012/12/23/VIPArcher基础设置/" data-title="VIPArcher基础设置 | 命运停驻之地" data-tsina="2209859500" class="share clearfix">
+		  </div>
+		
+		</div>
+	
+
+
+</footer>
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/Hexo/2012/12/23/窗口滑动美化/" title="窗口滑动美化">
+  <strong>上一篇：</strong><br/>
+  <span>
+  窗口滑动美化</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/Hexo/2012/12/23/八方向移动/"  title="八方向移动">
+ <strong>下一篇：</strong><br/> 
+ <span>八方向移动
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2012/12/23/VIPArcher基础设置/" data-title="VIPArcher基础设置" data-url="http://VIPArcher.github.io/Hexo/2012/12/23/VIPArcher基础设置/"></div>
+</section>
+
+
+</div>
+        <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart" class="card">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="weiboshow">
+  <p class="asidetitle">我的微博</p>
+	<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="https://widget.weibo.com/weiboshow/index.php?language=&width=&height=&fansRow=1&ptype=0&speed=0&skin=9&isTitle=0&noborder=1&isWeibo=0&isFans=0&uid=2209859500&verifier=a2e3df32&colors=ffffff,ffffff,666666,0082cb,ecfbfd&dpc=1">这里本来应该显示一个微博秀</iframe>
+</div>
+
+  <div class="musicshow">
+  <p class="asidetitle">Music!</p>
+  <embed id="musicEmbed" type="application/x-shockwave-flash" width="190" height="275" wmode="opaque"></embed>
+  <script type="text/javascript">
+  	(function(){
+	  function playMusic(list){
+	    document.getElementById("musicEmbed").src = 'https://www.xiami.com/widget/49935010_' +
+	    list + '_190_300_2CA6CB_F1F1F1_1/multiPlayer.swf'
+	  }
+	  function randPlayList(max){
+	    var list = [1775863928,1769509693,3035981,1769340552,3435904,1769304758,1769462115,1769304758,1771526122,1770554727,1769605529,1770728495,1769701059,1772515105,1770102834,368272].sort(function(){ return 0.5 - Math.random() })
+	      return list.slice(0,max).join(',')
+	  }
+	  playMusic(randPlayList(10))
+	})()
+  </script>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/Hexo/categories/JGSS1/" title="JGSS1">JGSS1<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/Hexo/categories/RGSS3/" title="RGSS3">RGSS3<sup>30</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/Hexo/tags/RMVA/" title="RMVA">RMVA<!--sup>30</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/地图效果/" title="地图效果">地图效果<!--sup>12</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/系统脚本/" title="系统脚本">系统脚本<!--sup>8</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/战斗脚本/" title="战斗脚本">战斗脚本<!--sup>4</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/RMMV/" title="RMMV">RMMV<!--sup>3</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/菜单脚本/" title="菜单脚本">菜单脚本<!--sup>3</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/跳过标题/" title="跳过标题">跳过标题<!--sup>2</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/菜单效果/" title="菜单效果">菜单效果<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/对话框脚本/" title="对话框脚本">对话框脚本<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/便捷脚本/" title="便捷脚本">便捷脚本<!--sup>1</sup--></a></li>
+			
+		
+			
+				<li><a href="/Hexo/tags/基础脚本/" title="基础脚本">基础脚本<!--sup>1</sup--></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/Hexo/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">有趣的地方</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://rm.66rpg.com/" target="_blank" title="梦想世界，在你手中">66RPG</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://seiran.mist.so/" target="_blank" title="晴兰的秘密社团">Seiran</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://taroxd.github.io/" target="_blank" title="Taroxd's Blog">Taroxd</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://hyrious.github.io/" target="_blank" title="喵喵喵的沟">喵喵喵的沟</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://miaowm5.coding.me/script-blog/list.html" target="_blank" title="喵呜喵5的原创脚本列表">喵污的脚本列表</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://rmproject.lofter.com/hello" target="_blank" title="授权素材推广计划">授权素材推广计划</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+      </div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Free RPG Maker Scripts <br/>
+			More Things About RPG Maker</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/VIPArcher" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/VIPArcher" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:VIPArcher@sina.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" target="_blank">
+            <img src="/Hexo/img/cc-by-nc-sa.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+	<p class="copyright">Powered by 
+		<a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 
+		2017 
+		
+			<a href="/Hexo/about" target="_blank" title="VIPArcher">VIPArcher</a>
+		
+	</p>
+</div>
+</footer>
+  </body>
+  <script src="/Hexo/js/jquery-2.0.3.min.js"></script>
+<script src="/Hexo/js/jquery.imagesloaded.min.js"></script>
+<script src="/Hexo/js/gallery.js"></script>
+<script src="/Hexo/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"viparcher"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Hexo/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/Hexo/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e7773379953bb5491e404334f9c05797";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/Hexo/img/scrollup.png"/></a>
+	</div>
+	<script src="/Hexo/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<!-- console.log("By VIPArcher") -->
+<script>ﾟωﾟﾉ= /｀ｍ´）ﾉ ~┻━┻   //*´∇｀*/ ['_']; o=(ﾟｰﾟ)  =_=3; c=(ﾟΘﾟ) =(ﾟｰﾟ)-(ﾟｰﾟ); (ﾟДﾟ) =(ﾟΘﾟ)= (o^_^o)/ (o^_^o);(ﾟДﾟ)={ﾟΘﾟ: '_' ,ﾟωﾟﾉ : ((ﾟωﾟﾉ==3) +'_') [ﾟΘﾟ] ,ﾟｰﾟﾉ :(ﾟωﾟﾉ+ '_')[o^_^o -(ﾟΘﾟ)] ,ﾟДﾟﾉ:((ﾟｰﾟ==3) +'_')[ﾟｰﾟ] }; (ﾟДﾟ) [ﾟΘﾟ] =((ﾟωﾟﾉ==3) +'_') [c^_^o];(ﾟДﾟ) ['c'] = ((ﾟДﾟ)+'_') [ (ﾟｰﾟ)+(ﾟｰﾟ)-(ﾟΘﾟ) ];(ﾟДﾟ) ['o'] = ((ﾟДﾟ)+'_') [ﾟΘﾟ];(ﾟoﾟ)=(ﾟДﾟ) ['c']+(ﾟДﾟ) ['o']+(ﾟωﾟﾉ +'_')[ﾟΘﾟ]+ ((ﾟωﾟﾉ==3) +'_') [ﾟｰﾟ] + ((ﾟДﾟ) +'_') [(ﾟｰﾟ)+(ﾟｰﾟ)]+ ((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+((ﾟｰﾟ==3) +'_') [(ﾟｰﾟ) - (ﾟΘﾟ)]+(ﾟДﾟ) ['c']+((ﾟДﾟ)+'_') [(ﾟｰﾟ)+(ﾟｰﾟ)]+ (ﾟДﾟ) ['o']+((ﾟｰﾟ==3) +'_') [ﾟΘﾟ];(ﾟДﾟ) ['_'] =(o^_^o) [ﾟoﾟ] [ﾟoﾟ];(ﾟεﾟ)=((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+ (ﾟДﾟ) .ﾟДﾟﾉ+((ﾟДﾟ)+'_') [(ﾟｰﾟ) + (ﾟｰﾟ)]+((ﾟｰﾟ==3) +'_') [o^_^o -ﾟΘﾟ]+((ﾟｰﾟ==3) +'_') [ﾟΘﾟ]+ (ﾟωﾟﾉ +'_') [ﾟΘﾟ]; (ﾟｰﾟ)+=(ﾟΘﾟ); (ﾟДﾟ)[ﾟεﾟ]='\\'; (ﾟДﾟ).ﾟΘﾟﾉ=(ﾟДﾟ+ ﾟｰﾟ)[o^_^o -(ﾟΘﾟ)];(oﾟｰﾟo)=(ﾟωﾟﾉ +'_')[c^_^o];(ﾟДﾟ) [ﾟoﾟ]='\"';(ﾟДﾟ) ['_'] ( (ﾟДﾟ) ['_'] (ﾟεﾟ+(ﾟДﾟ)[ﾟoﾟ]+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟΘﾟ)+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟoﾟ]) (ﾟΘﾟ)) ('_');</script>
+</html>
